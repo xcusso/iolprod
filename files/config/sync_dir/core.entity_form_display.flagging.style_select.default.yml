@@ -1,0 +1,22 @@
+uuid: 33f86a0a-5454-4889-be18-b8887b3bc887
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.flagging.style_select.field_private_tags
+    - flag.flag.style_select
+id: flagging.style_select.default
+targetEntityType: flagging
+bundle: style_select
+mode: default
+content:
+  field_private_tags:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden: {  }

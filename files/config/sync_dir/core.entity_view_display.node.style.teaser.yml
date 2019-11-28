@@ -1,0 +1,23 @@
+uuid: 186f67a7-14a1-487f-927a-f50e3b295c42
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.style.field_style_description
+    - node.type.style
+  module:
+    - user
+id: node.style.teaser
+targetEntityType: node
+bundle: style
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_style_description: true
+  langcode: true

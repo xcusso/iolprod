@@ -1,0 +1,45 @@
+uuid: 0dbdf969-524e-4e5b-b46e-964a30393476
+langcode: en
+status: true
+dependencies: {  }
+id: supervisor
+label: Supervisor
+weight: -6
+is_admin: null
+permissions:
+  - 'administer flaggings'
+  - 'create artist content'
+  - 'create content translations'
+  - 'create public_documentation content'
+  - 'create style content'
+  - 'create terms in artwork_type'
+  - 'create terms in style_category'
+  - 'create terms in style_tag'
+  - 'delete any artist content'
+  - 'delete any style content'
+  - 'delete artist revisions'
+  - 'delete content translations'
+  - 'delete style revisions'
+  - 'delete terms in artwork_type'
+  - 'delete terms in style_category'
+  - 'delete terms in style_tag'
+  - 'edit any artist content'
+  - 'edit any style content'
+  - 'edit terms in artwork_type'
+  - 'edit terms in style_category'
+  - 'edit terms in style_tag'
+  - 'flag style_select'
+  - 'revert artist revisions'
+  - 'revert style revisions'
+  - 'translate any entity'
+  - 'translate artist node'
+  - 'translate artwork_type taxonomy_term'
+  - 'translate public_documentation node'
+  - 'translate style node'
+  - 'translate style_category taxonomy_term'
+  - 'translate style_tag taxonomy_term'
+  - 'unflag style_select'
+  - 'update content translations'
+  - 'view artist revisions'
+  - 'view own unpublished content'
+  - 'view style revisions'

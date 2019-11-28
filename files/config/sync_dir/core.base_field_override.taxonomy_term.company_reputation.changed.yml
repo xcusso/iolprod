@@ -1,0 +1,18 @@
+uuid: 2fa69cbf-77ca-4003-9c82-ce49cfd1d6d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.company_reputation
+id: taxonomy_term.company_reputation.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: company_reputation
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

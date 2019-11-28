@@ -1,0 +1,8 @@
+uuid: dbbf306f-9610-4671-9c9c-4297ec7eed48
+langcode: en
+status: true
+dependencies: {  }
+id: customer
+label: Customer
+description: 'Customer menu'
+locked: false

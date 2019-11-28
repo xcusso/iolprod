@@ -1,0 +1,8 @@
+uuid: 091354f4-8615-4f21-949e-038c098cbed5
+langcode: en
+status: true
+dependencies: {  }
+id: supervisor
+label: Supervisor
+description: 'Menu per supervisor del web'
+locked: false

@@ -1,0 +1,11 @@
+uuid: 72629c56-6837-4d31-989c-602d4d39c31e
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.private_tags
+id: taxonomy_term.private_tags
+target_entity_type_id: taxonomy_term
+target_bundle: private_tags
+default_langcode: current_interface
+language_alterable: false

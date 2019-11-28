@@ -1,0 +1,18 @@
+uuid: c5a446ef-806e-43b6-9200-10e6d30e8f42
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Style
+type: style
+description: 'Pagina per els diferents estils.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

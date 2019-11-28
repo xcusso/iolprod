@@ -1,0 +1,18 @@
+uuid: acc5ffe7-33aa-455b-bc14-2912d15c25fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.company_reputation
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.company_reputation
+target_entity_type_id: taxonomy_term
+target_bundle: company_reputation
+default_langcode: current_interface
+language_alterable: false

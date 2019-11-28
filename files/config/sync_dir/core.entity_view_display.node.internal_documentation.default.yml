@@ -1,0 +1,29 @@
+uuid: 8710a064-4523-4ee7-906a-399b25887fad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.internal_documentation.body
+    - node.type.internal_documentation
+  module:
+    - text
+    - user
+id: node.internal_documentation.default
+targetEntityType: node
+bundle: internal_documentation
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

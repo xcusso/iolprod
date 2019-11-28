@@ -1,0 +1,62 @@
+uuid: 5e971102-0595-406c-9bce-e6a485e1b625
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.node.creator
+    - field.field.node.artist.field_artist_image
+    - field.field.node.artist.field_artist_profile
+    - image.style.thumbnail
+    - node.type.artist
+  module:
+    - image
+    - text
+id: node.artist.creator
+targetEntityType: node
+bundle: artist
+mode: creator
+content:
+  field_artist_image:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_artist_profile:
+    weight: 2
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  langcode:
+    type: language_select
+    weight: 3
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

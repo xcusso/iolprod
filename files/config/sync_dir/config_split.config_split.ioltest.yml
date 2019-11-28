@@ -1,0 +1,15 @@
+uuid: 10ac8d10-241e-4831-820a-3a1382d512ce
+langcode: en
+status: true
+dependencies: {  }
+id: ioltest
+label: ioltest
+description: 'Moduls que no han d''anar a test'
+folder: ../files/config/split_test
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

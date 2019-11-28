@@ -1,0 +1,20 @@
+uuid: 905bba22-88fb-4e5f-a132-e7f99b70746e
+langcode: en
+status: true
+dependencies:
+  module:
+    - flag
+    - taxonomy
+id: flagging.field_private_tags
+field_name: field_private_tags
+entity_type: flagging
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

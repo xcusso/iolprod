@@ -1,0 +1,8 @@
+uuid: 3d34249a-6f95-403c-a724-70138066a5dd
+langcode: en
+status: true
+dependencies: {  }
+name: 'Style tag'
+vid: style_tag
+description: 'Style tags'
+weight: 0

@@ -1,0 +1,10 @@
+uuid: 03783844-a0ee-40ba-98ac-e87d16f045e2
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.supervisor
+label: Supervisor
+targetEntityType: node
+cache: true

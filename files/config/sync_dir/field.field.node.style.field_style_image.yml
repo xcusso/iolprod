@@ -1,0 +1,38 @@
+uuid: afa568f1-f126-4a92-afbd-c3b5e16c9c17
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_style_image
+    - node.type.style
+  module:
+    - image
+id: node.style.field_style_image
+field_name: field_style_image
+entity_type: node
+bundle: style
+label: 'Style image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'styles/[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

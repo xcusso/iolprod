@@ -1,0 +1,24 @@
+uuid: 053786a9-e76b-4216-a4b7-3efae5c3a9ee
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: btW6TFHajhy7Eo6YUvdFiPh4TcPggo8GBXYctjV6zag
+id: authenticated
+label: 'Authenticated user'
+weight: -9
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access shortcuts'
+  - 'access site-wide contact form'
+  - 'masquerade as administrator'
+  - 'masquerade as authenticated'
+  - 'masquerade as creator'
+  - 'masquerade as customer'
+  - 'masquerade as supervisor'
+  - 'post comments'
+  - 'search content'
+  - 'skip comment approval'
+  - 'use text format basic_html'

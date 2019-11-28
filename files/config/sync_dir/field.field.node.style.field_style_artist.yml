@@ -1,0 +1,25 @@
+uuid: d3ece7f4-e64d-4e37-929e-5d60afc326d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_style_artist
+    - node.type.style
+id: node.style.field_style_artist
+field_name: field_style_artist
+entity_type: node
+bundle: style
+label: 'Style artist'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: artist
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

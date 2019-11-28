@@ -1,0 +1,77 @@
+uuid: b1a29ac7-8945-43df-8fd6-75a0adab627c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.style.field_style_artist
+    - field.field.node.style.field_style_artwork_types
+    - field.field.node.style.field_style_category
+    - field.field.node.style.field_style_description
+    - field.field.node.style.field_style_image
+    - field.field.node.style.field_style_tags
+    - image.style.thumbnail
+    - node.type.style
+  module:
+    - image
+    - text
+    - user
+id: node.style.default
+targetEntityType: node
+bundle: style
+mode: default
+content:
+  field_style_artist:
+    weight: 106
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_style_artwork_types:
+    weight: 108
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_style_category:
+    weight: 103
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_style_description:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_style_image:
+    weight: 105
+    label: above
+    settings:
+      image_style: thumbnail
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_style_tags:
+    weight: 104
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

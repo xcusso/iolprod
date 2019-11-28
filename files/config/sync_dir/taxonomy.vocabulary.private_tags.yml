@@ -1,0 +1,8 @@
+uuid: 766d3794-0dc3-4577-9015-25421a9425e3
+langcode: en
+status: true
+dependencies: {  }
+name: 'Private tags'
+vid: private_tags
+description: 'Tags for private user'
+weight: 0

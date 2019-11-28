@@ -1,0 +1,8 @@
+uuid: 869e0b2e-997e-4db0-8c45-ca8c1776d0d8
+langcode: en
+status: true
+dependencies: {  }
+name: 'Style category'
+vid: style_category
+description: 'Structure style category'
+weight: 0

@@ -1,0 +1,11 @@
+uuid: 5178cbaf-e349-42ce-bcd9-f7717dcc7cc0
+langcode: en
+status: true
+dependencies: {  }
+id: customer
+label: Customer
+weight: -8
+is_admin: null
+permissions:
+  - 'flag style_select'
+  - 'unflag style_select'

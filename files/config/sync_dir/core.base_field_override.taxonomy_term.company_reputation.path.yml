@@ -1,0 +1,20 @@
+uuid: 59d50e8e-c309-444f-a206-7b08c4dcae11
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.company_reputation
+  module:
+    - path
+id: taxonomy_term.company_reputation.path
+field_name: path
+entity_type: taxonomy_term
+bundle: company_reputation
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

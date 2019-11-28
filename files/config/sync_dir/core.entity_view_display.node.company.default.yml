@@ -1,0 +1,29 @@
+uuid: c62bb3b9-f0ff-4cbf-9598-2cd442d1b7f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.company.field_company_address
+    - node.type.company
+  module:
+    - address
+    - user
+id: node.company.default
+targetEntityType: node
+bundle: company
+mode: default
+content:
+  field_company_address:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

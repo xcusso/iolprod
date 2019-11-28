@@ -1,0 +1,29 @@
+uuid: b984a553-d9c3-45b1-9997-0ff00579d007
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.public_documentation.body
+    - node.type.public_documentation
+  module:
+    - text
+    - user
+id: node.public_documentation.default
+targetEntityType: node
+bundle: public_documentation
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,15 @@
+uuid: cc24e211-3216-415c-b3e4-386074a3790d
+langcode: en
+status: true
+dependencies:
+  config:
+    - flag.flag.style_select
+  module:
+    - flag
+id: flag_action.style_select_flag
+label: Select
+type: node
+plugin: 'flag_action:style_select_flag'
+configuration:
+  flag_id: style_select
+  flag_action: flag

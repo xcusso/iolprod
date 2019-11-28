@@ -1,0 +1,15 @@
+uuid: d8f57be5-eb5c-45b2-9ba0-82740c3d3b42
+langcode: en
+status: true
+dependencies:
+  config:
+    - flag.flag.style_select
+  module:
+    - flag
+id: flag_action.style_select_unflag
+label: Unselect
+type: node
+plugin: 'flag_action:style_select_unflag'
+configuration:
+  flag_id: style_select
+  flag_action: unflag

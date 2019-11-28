@@ -1,0 +1,22 @@
+uuid: 4b5643b0-c073-4f54-9258-cd0805928491
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.artist
+id: node.artist.status
+field_name: status
+entity_type: node
+bundle: artist
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

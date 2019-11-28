@@ -1,0 +1,94 @@
+uuid: 6416bc4f-533b-4ecb-8b99-0354da7a7587
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.node.creator
+    - field.field.node.style.field_style_artist
+    - field.field.node.style.field_style_artwork_types
+    - field.field.node.style.field_style_category
+    - field.field.node.style.field_style_description
+    - field.field.node.style.field_style_image
+    - field.field.node.style.field_style_tags
+    - image.style.thumbnail
+    - node.type.style
+  module:
+    - image
+    - text
+id: node.style.creator
+targetEntityType: node
+bundle: style
+mode: creator
+content:
+  field_style_artwork_types:
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_style_category:
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_style_description:
+    weight: 2
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_style_image:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_style_tags:
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  langcode:
+    type: language_select
+    weight: 6
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_style_artist: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

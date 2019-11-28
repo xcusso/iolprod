@@ -1,0 +1,24 @@
+uuid: 64b3baa9-ebd6-4405-9fe8-55969d4c9d6b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: directori_d_artistes
+label: 'Directori d''artistes'
+type: 'canonical_entities:node'
+pattern: '/artist/[node:title]'
+selection_criteria:
+  d21872a9-3ad4-48d2-8f26-b97763eb2feb:
+    id: node_type
+    bundles:
+      artist: artist
+    negate: false
+    context_mapping:
+      node: node
+    uuid: d21872a9-3ad4-48d2-8f26-b97763eb2feb
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

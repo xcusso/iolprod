@@ -1,0 +1,35 @@
+uuid: 629a764f-2f08-45cd-b6e4-12828fa32364
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.creator
+  module:
+    - system
+    - user
+  theme:
+    - bartik
+id: creator
+theme: bartik
+region: sidebar_first
+weight: -8
+provider: null
+plugin: 'system_menu_block:creator'
+settings:
+  id: 'system_menu_block:creator'
+  label: 'Creator Menu'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      creator: creator
+      supervisor: supervisor
+      administrator: administrator
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

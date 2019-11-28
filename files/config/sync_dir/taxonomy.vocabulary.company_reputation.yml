@@ -1,0 +1,8 @@
+uuid: d580a996-a02d-457b-b143-44e4f56bdf38
+langcode: en
+status: true
+dependencies: {  }
+name: 'Company reputation'
+vid: company_reputation
+description: 'Taxonomia per recollir els noms de les empreses'
+weight: 0

@@ -1,0 +1,29 @@
+uuid: 4b314392-1eaa-46c8-9530-9aca75a16a62
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_style_artwork_types
+    - node.type.style
+    - taxonomy.vocabulary.artwork_type
+id: node.style.field_style_artwork_types
+field_name: field_style_artwork_types
+entity_type: node
+bundle: style
+label: 'Style artwork types'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      artwork_type: artwork_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,31 @@
+uuid: 1daf3e82-a48c-4d30-b055-67458191e6bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.company_reputation.field_country
+    - taxonomy.vocabulary.company_reputation
+  module:
+    - address
+    - text
+id: taxonomy_term.company_reputation.default
+targetEntityType: taxonomy_term
+bundle: company_reputation
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_country:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+hidden:
+  langcode: true

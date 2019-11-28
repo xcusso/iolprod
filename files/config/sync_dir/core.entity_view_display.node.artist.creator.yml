@@ -1,0 +1,41 @@
+uuid: 99cbc762-9a3d-4f81-ab24-98579ab634d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.creator
+    - field.field.node.artist.field_artist_image
+    - field.field.node.artist.field_artist_profile
+    - node.type.artist
+  module:
+    - image
+    - text
+    - user
+id: node.artist.creator
+targetEntityType: node
+bundle: artist
+mode: creator
+content:
+  field_artist_image:
+    weight: 103
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_artist_profile:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

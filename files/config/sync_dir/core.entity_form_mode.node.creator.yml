@@ -1,0 +1,10 @@
+uuid: 3379ddfc-e4f1-4348-8284-9eed3d42de98
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.creator
+label: Creator
+targetEntityType: node
+cache: true

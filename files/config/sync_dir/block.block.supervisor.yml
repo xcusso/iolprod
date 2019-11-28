@@ -1,0 +1,34 @@
+uuid: a894a79b-3c51-4e32-9953-30b17364071a
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.supervisor
+  module:
+    - system
+    - user
+  theme:
+    - bartik
+id: supervisor
+theme: bartik
+region: sidebar_first
+weight: -6
+provider: null
+plugin: 'system_menu_block:supervisor'
+settings:
+  id: 'system_menu_block:supervisor'
+  label: 'Supervisor Menu'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      supervisor: supervisor
+      administrator: administrator
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

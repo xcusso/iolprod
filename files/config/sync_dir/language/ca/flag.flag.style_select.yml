@@ -1,0 +1,7 @@
+label: 'Seleccionar estil'
+flag_short: Selecciona
+flag_long: 'Selecciona aquest estil'
+flag_message: Seleccionat
+unflag_short: Deselecciona
+unflag_long: 'Deselecciona aquest estil'
+unflag_message: Deseleccionat

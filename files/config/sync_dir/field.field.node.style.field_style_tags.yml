@@ -1,0 +1,29 @@
+uuid: 289b6678-f624-4238-93ae-4cd17cb6c9d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_style_tags
+    - node.type.style
+    - taxonomy.vocabulary.style_tag
+id: node.style.field_style_tags
+field_name: field_style_tags
+entity_type: node
+bundle: style
+label: 'Style tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      style_tag: style_tag
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,8 @@
+uuid: 7629aac0-b19d-4e2d-bf60-fce1e1a5c407
+langcode: en
+status: true
+dependencies: {  }
+name: 'Artwork type'
+vid: artwork_type
+description: 'Type of artwork'
+weight: 0

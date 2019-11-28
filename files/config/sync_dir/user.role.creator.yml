@@ -1,0 +1,18 @@
+uuid: 5e48ff09-ef1c-44b0-aeb2-51d8d042fc52
+langcode: en
+status: true
+dependencies: {  }
+id: creator
+label: Creator
+weight: -7
+is_admin: null
+permissions:
+  - 'create artist content'
+  - 'create content translations'
+  - 'create style content'
+  - 'edit own artist content'
+  - 'edit own style content'
+  - 'translate artist node'
+  - 'translate artwork_type taxonomy_term'
+  - 'translate style node'
+  - 'view own unpublished content'

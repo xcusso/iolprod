@@ -1,0 +1,10 @@
+uuid: c9b50160-4afc-4aca-ba31-a682c00756e0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.customer
+label: Customer
+targetEntityType: node
+cache: true
