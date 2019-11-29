@@ -81,7 +81,6 @@ display:
           label: 'Mòdul de registre'
         count:
           label: 'Comptador d''ús'
-          format_plural_string: !!binary MQNAY291bnQ=
       title: 'Utilització de fitxer'
       arguments:
         fid:

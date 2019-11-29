@@ -13,11 +13,21 @@ targetEntityType: node
 bundle: style
 mode: teaser
 content:
+  flag_style_select:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   links:
     weight: 100
     settings: {  }
     third_party_settings: {  }
     region: content
 hidden:
+  field_style_artist: true
+  field_style_artwork_types: true
+  field_style_category: true
   field_style_description: true
+  field_style_image: true
+  field_style_tags: true
   langcode: true

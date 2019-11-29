@@ -19,5 +19,6 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_artist_image: true
   field_artist_profile: true
   langcode: true

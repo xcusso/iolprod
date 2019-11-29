@@ -1,0 +1,18 @@
+uuid: 8d9d94b2-bc80-411d-96a2-00c7c304f534
+langcode: en
+status: true
+dependencies: {  }
+id: split_prod
+label: iolprod
+description: 'Configuracions que no han de ser a prod'
+folder: ../files/config/split_prod
+module:
+  masquerade: 0
+theme: {  }
+blacklist:
+  - bartik.settings
+  - system.site
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0
