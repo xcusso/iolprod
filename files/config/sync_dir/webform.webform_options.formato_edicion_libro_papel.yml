@@ -1,0 +1,9 @@
+uuid: 5aa697b6-9877-445e-b2f4-df979eeba77b
+langcode: en
+status: true
+dependencies: {  }
+id: formato_edicion_libro_papel
+label: 'Formato edicion libro papel'
+category: IOL
+likert: false
+options: "'tapa dura': 'Tapa dura'\n'libro de bolsillo': 'Libro de bolsillo'\nfasciculo: Fasciculo\n"

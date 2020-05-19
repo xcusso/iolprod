@@ -69,7 +69,7 @@ display:
     display_title: Pàgina
     display_options:
       menu:
-        title: Llista
+        title: Llistat
         description: 'Trobeu i gestioneu la gent que interacciona amb el vostre lloc.'
       tab_options:
         title: Gent

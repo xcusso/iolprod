@@ -1,0 +1,11 @@
+uuid: fb2ba7fe-e136-48b6-a011-5eff856dc23a
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.image_printed_page
+id: commerce_product_variation.image_printed_page
+target_entity_type_id: commerce_product_variation
+target_bundle: image_printed_page
+default_langcode: site_default
+language_alterable: false

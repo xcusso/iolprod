@@ -1,0 +1,15 @@
+uuid: d6512386-768c-43c9-8c3c-a7882f581e2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - flag.flag.style_tag
+  module:
+    - flag
+id: flag_action.style_tag_flag
+label: 'Tag this item'
+type: node
+plugin: 'flag_action:style_tag_flag'
+configuration:
+  flag_id: style_tag
+  flag_action: flag

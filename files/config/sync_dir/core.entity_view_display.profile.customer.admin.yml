@@ -1,0 +1,31 @@
+uuid: 9beb0fce-3c8f-4924-8d3f-1e4e354f2450
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.profile.admin
+    - field.field.profile.customer.address
+    - profile.type.customer
+  enforced:
+    module:
+      - commerce_order
+  module:
+    - address
+_core:
+  default_config_hash: YIL4nZ3a2ByhSU7C9ITZYsmB6l3GSsvLyGlwNF1_hW4
+id: profile.customer.admin
+targetEntityType: profile
+bundle: customer
+mode: admin
+content:
+  address:
+    type: address_default
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true

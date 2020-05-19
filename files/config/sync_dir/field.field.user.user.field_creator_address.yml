@@ -1,0 +1,58 @@
+uuid: d51b998a-f826-4291-8d01-0771ae6b1afd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_creator_address
+  module:
+    - address
+    - multiple_registration
+    - user
+third_party_settings:
+  multiple_registration:
+    user_additional_register_form:
+      creator: creator
+      authenticated: 0
+    user_additional_register_form_required:
+      creator: creator
+      authenticated: 0
+id: user.user.field_creator_address
+field_name: field_creator_address
+entity_type: user
+bundle: user
+label: 'Creator address'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    country_code: ES
+    langcode: ''
+    given_name: ''
+    family_name: ''
+    organization: ''
+    address_line1: ''
+    address_line2: ''
+    postal_code: ''
+    locality: ''
+    administrative_area: ''
+    additional_name: null
+    sorting_code: null
+    dependent_locality: null
+default_value_callback: ''
+settings:
+  available_countries: {  }
+  langcode_override: ''
+  field_overrides:
+    additionalName:
+      override: optional
+    organization:
+      override: optional
+    addressLine2:
+      override: optional
+    sortingCode:
+      override: optional
+    dependentLocality:
+      override: optional
+  fields: {  }
+field_type: address

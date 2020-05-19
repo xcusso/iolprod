@@ -1,0 +1,33 @@
+uuid: 13749fae-017e-4efc-9e14-711ca33d0544
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.company_rating
+  module:
+    - ctools
+    - views
+  theme:
+    - bartik
+id: views_block__company_rating_block_3
+theme: bartik
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:company_rating-block_3'
+settings:
+  id: 'views_block:company_rating-block_3'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      company: company
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

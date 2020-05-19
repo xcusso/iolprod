@@ -1,0 +1,10 @@
+uuid: 703d6c4f-d6ec-4cb4-9fa2-014d01fc34a2
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.creator_register
+label: 'Creator register'
+targetEntityType: user
+cache: true

@@ -1,0 +1,24 @@
+uuid: 496aac16-2da7-4461-bbc1-4e07b55db581
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: artist_directory
+label: 'Artist directory'
+type: 'canonical_entities:node'
+pattern: '/artist/[node:title]'
+selection_criteria:
+  0796ffc2-c26f-4e63-96cd-bca11798226b:
+    id: node_type
+    bundles:
+      artist: artist
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 0796ffc2-c26f-4e63-96cd-bca11798226b
+selection_logic: and
+weight: -5
+relationships:
+  'node:langcode:language':
+    label: Language

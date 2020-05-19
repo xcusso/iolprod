@@ -1,0 +1,29 @@
+uuid: 95fe8785-d620-4560-8e09-25691e1c5938
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.style_selector
+  module:
+    - system
+    - views
+  theme:
+    - bartik
+id: exposedformstyle_selectorpage_1
+theme: bartik
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:style_selector-page_1'
+settings:
+  id: 'views_exposed_filter_block:style_selector-page_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: "/style/selector\r\n"
+    negate: false
+    context_mapping: {  }

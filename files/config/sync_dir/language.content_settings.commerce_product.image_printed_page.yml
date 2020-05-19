@@ -1,0 +1,16 @@
+uuid: 12827779-9e8f-47fb-8c10-d7656f870c22
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.image_printed_page
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: commerce_product.image_printed_page
+target_entity_type_id: commerce_product
+target_bundle: image_printed_page
+default_langcode: site_default
+language_alterable: false

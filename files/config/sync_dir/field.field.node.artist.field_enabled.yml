@@ -1,0 +1,23 @@
+uuid: 7959eb0a-6f59-4eeb-85e7-f6b932bc840d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_enabled
+    - node.type.artist
+id: node.artist.field_enabled
+field_name: field_enabled
+entity_type: node
+bundle: artist
+label: Enabled
+description: 'Check for enable this Artist, Uncheck for temporary out of service.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Enabled
+  off_label: Disabled
+field_type: boolean

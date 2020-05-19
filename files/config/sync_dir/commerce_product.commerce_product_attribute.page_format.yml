@@ -1,0 +1,7 @@
+uuid: 5e46d998-eaa5-48a7-8753-b7f0482701b9
+langcode: en
+status: true
+dependencies: {  }
+id: page_format
+label: 'Page format'
+elementType: select

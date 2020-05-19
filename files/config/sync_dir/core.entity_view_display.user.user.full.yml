@@ -1,0 +1,32 @@
+uuid: c11e8f0b-1caa-44fa-8359-804e03875ac6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.full
+    - field.field.user.user.field_creator_address
+    - field.field.user.user.field_dni
+    - field.field.user.user.user_picture
+  module:
+    - user
+_core:
+  default_config_hash: V51QPCKkgNREKtSmB9Iu2wmAMEpktVpnzklWaZV8UYo
+id: user.user.full
+targetEntityType: user
+bundle: user
+mode: full
+content:
+  member_for:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  creator_profile_profiles: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_creator_address: true
+  field_dni: true
+  langcode: true
+  user_picture: true

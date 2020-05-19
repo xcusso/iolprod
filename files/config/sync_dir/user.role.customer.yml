@@ -7,5 +7,10 @@ label: Customer
 weight: -8
 is_admin: null
 permissions:
+  - 'create terms in private_tags'
+  - 'delete terms in private_tags'
+  - 'edit terms in private_tags'
   - 'flag style_select'
+  - 'flag style_tag'
   - 'unflag style_select'
+  - 'unflag style_tag'

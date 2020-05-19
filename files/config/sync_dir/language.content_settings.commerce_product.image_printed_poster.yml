@@ -1,0 +1,16 @@
+uuid: 03859660-7fea-4406-8148-2954d6421bd7
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.image_printed_poster
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: commerce_product.image_printed_poster
+target_entity_type_id: commerce_product
+target_bundle: image_printed_poster
+default_langcode: site_default
+language_alterable: false

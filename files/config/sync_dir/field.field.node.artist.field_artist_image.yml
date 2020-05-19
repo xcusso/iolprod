@@ -12,7 +12,7 @@ field_name: field_artist_image
 entity_type: node
 bundle: artist
 label: 'Artist image'
-description: ''
+description: 'Select an image to represent the artist'
 required: false
 translatable: false
 default_value: {  }

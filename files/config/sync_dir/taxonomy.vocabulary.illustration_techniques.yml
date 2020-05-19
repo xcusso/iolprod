@@ -1,0 +1,8 @@
+uuid: 054730ac-1881-440e-baab-cd48a3760b0d
+langcode: en
+status: true
+dependencies: {  }
+name: 'Illustration techniques'
+vid: illustration_techniques
+description: 'Techniques for create illustrations'
+weight: 0

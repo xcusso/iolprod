@@ -4,7 +4,9 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.artist.field_artist_image
     - field.field.node.artist.field_artist_profile
+    - field.field.node.artist.field_enabled
     - node.type.artist
   module:
     - user
@@ -19,6 +21,10 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
   field_artist_image: true
   field_artist_profile: true
+  field_enabled: true
   langcode: true

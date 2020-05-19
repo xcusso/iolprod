@@ -1,0 +1,9 @@
+uuid: a6748133-6088-4878-967b-56080717c4d5
+langcode: en
+status: true
+dependencies: {  }
+id: periodicity
+label: Periodicity
+category: IOL
+likert: false
+options: "monthly: monthly\nbimonthly: bimonthly\nquarterly: quarterly\nhalfyearly: half-yearly\nannual: annual\nbiannual: biannual\n"

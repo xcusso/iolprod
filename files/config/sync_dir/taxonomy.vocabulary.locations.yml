@@ -1,0 +1,8 @@
+uuid: b93d1848-8750-4fb6-9b3d-8d0327866f25
+langcode: en
+status: true
+dependencies: {  }
+name: Locations
+vid: locations
+description: 'List of locations, areas, countries'
+weight: 0

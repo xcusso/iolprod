@@ -1,0 +1,9 @@
+uuid: 69a2abdd-b453-4656-b987-9ffac88cd3c3
+langcode: en
+status: true
+dependencies: {  }
+id: paper_sizes
+label: 'Paper Sizes'
+category: IOL
+likert: false
+options: "'A10 Landscape': 'A10 Landscape'\n'A10 Portrait': 'A10 Portrait'\n'A9 Landscape': 'A9 Landscape'\n'A9 Portrait': 'A9 Portrait'\n'A8 Landscape': 'A8 Landscape'\n'A8 Portrait': 'A8 Portrait'\n'A7 Landscape': 'A7 Landscape'\n'A7 Portrait': 'A7 Portrait'\n'A6 Landscape': 'A6 Landscape'\n'A6 Portrait': 'A6 Portrait'\n'A5 Landscape': 'A5 Landscape'\n'A5 Portrait': 'A5 Portrait'\n'A4 Landscape': 'A4 Landscape'\n'A4 Portrait': 'A4 Portrait'\n'A3 Landscape': 'A3 Landscape'\n'A3 Portrait': 'A3 Portrait'\nOther: Other\n"

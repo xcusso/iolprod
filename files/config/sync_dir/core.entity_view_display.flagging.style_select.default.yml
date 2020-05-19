@@ -3,19 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.flagging.style_select.field_private_tags
     - flag.flag.style_select
 id: flagging.style_select.default
 targetEntityType: flagging
 bundle: style_select
 mode: default
-content:
-  field_private_tags:
-    weight: 0
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-hidden: {  }
+content: {  }
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true

@@ -1,0 +1,8 @@
+uuid: 9d710781-c52a-4c8f-b117-2b716d93a33a
+langcode: en
+status: true
+dependencies: {  }
+name: 'Color feature'
+vid: color_feature
+description: 'List of available features'
+weight: 0

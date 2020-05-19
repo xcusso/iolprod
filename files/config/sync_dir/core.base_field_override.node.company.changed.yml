@@ -1,0 +1,18 @@
+uuid: 9038d5dc-fcdc-4bd1-acb0-02fdd847fffb
+langcode: ca
+status: true
+dependencies:
+  config:
+    - node.type.company
+id: node.company.changed
+field_name: changed
+entity_type: node
+bundle: company
+label: Canviat
+description: 'L''hora en què es va editar el node per darrera vegada.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

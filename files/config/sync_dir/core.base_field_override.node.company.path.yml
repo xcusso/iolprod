@@ -1,0 +1,20 @@
+uuid: 1e4ffe29-2184-4f30-8509-75113d5f562a
+langcode: ca
+status: true
+dependencies:
+  config:
+    - node.type.company
+  module:
+    - path
+id: node.company.path
+field_name: path
+entity_type: node
+bundle: company
+label: 'Àlies URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

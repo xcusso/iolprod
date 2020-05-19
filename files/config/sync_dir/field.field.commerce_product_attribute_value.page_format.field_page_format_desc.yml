@@ -1,0 +1,19 @@
+uuid: d82c2772-bc8d-4115-a9bb-ea4bff7bd9ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_attribute.page_format
+    - field.storage.commerce_product_attribute_value.field_page_format_desc
+id: commerce_product_attribute_value.page_format.field_page_format_desc
+field_name: field_page_format_desc
+entity_type: commerce_product_attribute_value
+bundle: page_format
+label: 'Format description'
+description: 'Description of page format size'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

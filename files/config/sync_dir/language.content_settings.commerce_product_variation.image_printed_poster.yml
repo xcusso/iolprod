@@ -1,0 +1,11 @@
+uuid: d1333a85-0631-4282-8533-d2c3e991df8f
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.image_printed_poster
+id: commerce_product_variation.image_printed_poster
+target_entity_type_id: commerce_product_variation
+target_bundle: image_printed_poster
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,16 @@
+uuid: f04f7a5d-9f9a-4a72-bce2-e4d52b708e5d
+langcode: en
+status: true
+dependencies: {  }
+id: split_stage
+label: iolstage
+description: 'Configuracions que no han de ser al stage.'
+folder: ../files/config/split_stage
+module: {  }
+theme: {  }
+blacklist:
+  - color.theme.bartik
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 2

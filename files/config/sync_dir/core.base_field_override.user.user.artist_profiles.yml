@@ -1,0 +1,20 @@
+uuid: 0a82fb58-18a6-4622-b332-243d82dc3f29
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.user.artist_profiles
+field_name: artist_profiles
+entity_type: user
+bundle: user
+label: 'Artist profiles'
+description: 'User profiles.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

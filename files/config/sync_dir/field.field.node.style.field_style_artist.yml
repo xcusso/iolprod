@@ -9,10 +9,10 @@ id: node.style.field_style_artist
 field_name: field_style_artist
 entity_type: node
 bundle: style
-label: 'Style artist'
-description: ''
+label: 'Artista del estil'
+description: 'Seleccioneu a quin artista pertany aquest estil.'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

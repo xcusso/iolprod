@@ -19,7 +19,7 @@ unflag_long: 'Unselect this style'
 unflag_message: Unselected
 unflag_denied_text: ''
 flag_type: 'entity:node'
-link_type: field_entry
+link_type: ajax_link
 flagTypeConfig:
   show_in_links: {  }
   show_as_field: true

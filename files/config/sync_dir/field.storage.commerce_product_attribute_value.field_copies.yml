@@ -1,0 +1,20 @@
+uuid: cd62f588-cc6a-4a11-aba8-d35fba59a7bc
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product_attribute_value.field_copies
+field_name: field_copies
+entity_type: commerce_product_attribute_value
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 2
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

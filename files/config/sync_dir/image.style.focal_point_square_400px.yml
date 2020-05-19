@@ -1,0 +1,17 @@
+uuid: 81e87f51-2e71-4f70-99e4-4c479364c4eb
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: focal_point_square_400px
+label: 'Focal point square 400px'
+effects:
+  2edf960a-99ed-4a93-b4ac-f55a26f423bf:
+    uuid: 2edf960a-99ed-4a93-b4ac-f55a26f423bf
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 400
+      height: 400
+      crop_type: focal_point

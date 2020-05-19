@@ -12,7 +12,7 @@ dependencies:
 id: customer
 theme: bartik
 region: sidebar_first
-weight: -7
+weight: -8
 provider: null
 plugin: 'system_menu_block:customer'
 settings:
@@ -28,7 +28,6 @@ visibility:
     id: user_role
     roles:
       customer: customer
-      supervisor: supervisor
       administrator: administrator
     negate: false
     context_mapping:

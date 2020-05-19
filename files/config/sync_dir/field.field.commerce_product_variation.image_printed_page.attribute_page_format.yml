@@ -1,0 +1,24 @@
+uuid: 09ac89b3-6e08-4097-801b-122787977235
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_attribute.page_format
+    - commerce_product.commerce_product_variation_type.image_printed_page
+    - field.storage.commerce_product_variation.attribute_page_format
+id: commerce_product_variation.image_printed_page.attribute_page_format
+field_name: attribute_page_format
+entity_type: commerce_product_variation
+bundle: image_printed_page
+label: 'Page format'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:commerce_product_attribute_value'
+  handler_settings:
+    target_bundles:
+      - page_format
+field_type: entity_reference

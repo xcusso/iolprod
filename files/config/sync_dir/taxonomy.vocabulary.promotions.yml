@@ -1,0 +1,8 @@
+uuid: 670b0cbc-4166-481d-8649-7e4c57f7406e
+langcode: en
+status: true
+dependencies: {  }
+name: Promotions
+vid: promotions
+description: 'Tag to promote styles and or artist (or other) to create campaings'
+weight: 0

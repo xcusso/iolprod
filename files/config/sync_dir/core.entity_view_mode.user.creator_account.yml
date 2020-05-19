@@ -1,0 +1,10 @@
+uuid: d86b991b-2a31-45ed-be7e-d58e85d73e69
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.creator_account
+label: 'Creator account'
+targetEntityType: user
+cache: true

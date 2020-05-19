@@ -1,0 +1,16 @@
+uuid: 39082aaf-8f8a-4f10-a999-7899cae1f071
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.illustration_techniques
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.illustration_techniques
+target_entity_type_id: taxonomy_term
+target_bundle: illustration_techniques
+default_langcode: site_default
+language_alterable: false

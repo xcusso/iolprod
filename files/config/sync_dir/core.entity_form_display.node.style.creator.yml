@@ -4,6 +4,9 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.node.creator
+    - field.field.node.style.field_abstract_realistic
+    - field.field.node.style.field_detail_level
+    - field.field.node.style.field_enabled
     - field.field.node.style.field_style_artist
     - field.field.node.style.field_style_artwork_types
     - field.field.node.style.field_style_category
@@ -26,6 +29,7 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
@@ -35,6 +39,7 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
@@ -44,6 +49,7 @@ content:
       rows: 9
       summary_rows: 3
       placeholder: ''
+      show_summary: false
     third_party_settings: {  }
     type: text_textarea_with_summary
     region: content
@@ -61,6 +67,7 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
@@ -86,6 +93,9 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_abstract_realistic: true
+  field_detail_level: true
+  field_enabled: true
   field_style_artist: true
   path: true
   promote: true

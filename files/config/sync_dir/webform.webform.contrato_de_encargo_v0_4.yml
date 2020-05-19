@@ -1,0 +1,180 @@
+langcode: en
+status: closed
+dependencies: {  }
+open: null
+close: null
+weight: 0
+uid: 1
+template: true
+archive: false
+id: contrato_de_encargo_v0_4
+title: 'Contrato de encargo v0.4'
+description: "<span style=\"background:transparent\"><span style=\"line-height:100%\">Basado en el contrato marco del Convenio sobre condiciones generales del contrato de edici&oacute;n firmado con la Federaci&oacute;n de Gremios de Editores de Espa&ntilde;a y la Asociaci&oacute;n Colegial de Escritores el 29 de julio de 1999</span></span><br />\r\n&nbsp;"
+category: Agreements
+elements: "cliente:\n  '#type': webform_wizard_page\n  '#title': Cliente\n  cliente_nif:\n    '#type': textfield\n    '#title': 'Identificación fiscal'\n    '#description': 'Numero de identificac&oacute;n fiscal (NIF) o DNI en caso de particulares'\n  cliente_datos:\n    '#type': address\n    '#title': 'Datos empresa'\n    '#field_overrides':\n      givenName: required\n      additionalName: required\n      familyName: required\n      organization: required\n      addressLine1: required\n      postalCode: required\n      dependentLocality: required\n      locality: required\n  cliente_cargo:\n    '#type': textfield\n    '#title': 'Cargo representante'\n  cliente_acreditacion:\n    '#type': textfield\n    '#title': 'Acreditación representante'\ncontrato_objeto:\n  '#type': webform_wizard_page\n  '#title': 'Objeto del contrato'\n  lugar_fecha:\n    '#type': fieldset\n    '#title': 'Lugar y fecha del contrato'\n    contrato_fecha:\n      '#type': date\n      '#title': 'Fecha del contrato'\n      '#date_date_format': ''\n    contrato_lugar:\n      '#type': address\n      '#title': 'Lugar de celebracion'\n      '#default_value':\n        - '''current-user:personal_information:field_personal_address:locality'''\n      '#available_countries':\n        - ES\n      '#field_overrides':\n        givenName: hidden\n        additionalName: hidden\n        familyName: hidden\n        organization: hidden\n        addressLine1: hidden\n        addressLine2: hidden\n        postalCode: hidden\n        sortingCode: hidden\n  contrato_objeto_descripcion:\n    '#type': textarea\n    '#title': 'Objeto del contrato'\n    '#help': 'Exponer aqui la descripci&oacute;n del encargo'\n  contrato_destino:\n    '#type': textarea\n    '#title': 'Destino del encargo'\n    '#description': 'Destino del encargo (p.e. publicaci&oacute;n en libro..)'\n  contrato_detalles:\n    '#type': webform_document_file\n    '#title': 'Detalles encargo'\n    '#description': 'Detalles del encargo (se incluiran en anexo)'\ncontrato_condiciones:\n  '#type': webform_wizard_page\n  '#title': 'Condiciones del contrato'\n  contrato_fecha_entrega:\n    '#type': date\n    '#title': 'Fecha límite de entrega'\n    '#date_date_format': ''\n  contrato_anticipo:\n    '#type': number\n    '#title': Anticipo\n    '#field_suffix': €\n    '#min': 0\n    '#step': 1\n  contrato_minimo:\n    '#type': number\n    '#title': Mínimo\n    '#field_suffix': €\n    '#min': 0\n    '#step': 1\ncontrato:\n  '#type': webform_wizard_page\n  '#title': Contrato\n  contrato_resultado:\n    '#type': processed_text\n    '#text': \"<p><span><span><strong>Contrato de encargo de creaciones visuales</strong></span></span></p>\\n\\n<p>&nbsp;</p>\\n\\n<p><span>En&nbsp;[webform_submission:values:contrato_lugar:locality], a [webform_submission:values:contrato_fecha:d] de [webform_submission:values:contrato_fecha:F] de&nbsp;[webform_submission:values:contrato_fecha:Y] .</span></p>\\n\\n<p>&nbsp;</p>\\n\\n<p><span><strong>Reunidos: </strong></span></p>\\n\\n<p><span>De una parte <strong>[current-user:personal_information:field_personal_address:given_name] [current-user:personal_information:field_personal_address:family_name] </strong>&nbsp;actuando en su propio nombre y representación, mayor de edad, con domicilio en [current-user:personal_information:field_personal_address:address_line1] [current-user:personal_information:field_personal_address:postal_code] [current-user:personal_information:field_personal_address:locality] DNI: [current-user:personal_information:field_dni]&nbsp;(de ahora en adelante el <strong>autor</strong> o creador visual). </span></p>\\n\\n<p><span>De otra parte, <strong>[webform_submission:values:cliente_datos:organization]</strong>&nbsp;con domicilio social en [webform_submission:values:cliente_datos:address_line1] [webform_submission:values:cliente_datos:postal_code] [webform_submission:values:cliente_datos:locality], inscrita en el registro Mercantil con Nif&nbsp;[webform_submission:values:cliente_nif]&nbsp;representada en este acto por don<strong>&nbsp;[webform_submission:values:cliente_datos:given_name] [webform_submission:values:cliente_datos:family_name]</strong>&nbsp;en su calidad de&nbsp;[webform_submission:values:cliente_cargo], según se acredita mediante [webform_submission:values:cliente_acreditacion] (de ahora en adelante el <strong>editor</strong>). </span></p>\\n\\n<p><span>Ambas partes se reconocen con plena capacidad legal para firmar el presente contrato que someten a los siguientes </span></p>\\n\\n<p><span><strong>Pactos: </strong></span></p>\\n\\n<p><span><strong>Primero</strong>.— El editor encarga al autor la realización de <strong>[webform_submission:values:contrato_objeto_descripcion]</strong>,<span>&nbsp;a fin de ser editadas y publicadas en&nbsp;<strong>[webform_submission:values:contrato_destino]</strong><span>. Se especifican las características de dicha obra, así como las características de la publicación, distribución en presentación en el anexo número uno. </span></span></span></p>\\n\\n<p><span><strong>Segundo</strong>.— La obra encargada será entregada por el autor al editor antes del día [webform_submission:values:contrato_fecha_entrega:d/m/y]<span>&nbsp;totalmente acabada y en condiciones de ser reproducida. </span></span></p>\\n\\n<p><span><strong>Tercero</strong>.— El editor pagará al autor, como anticipo de la cantidad que le corresponderá en concepto de derechos de explotación sobre la obra, la cantidad de&nbsp;[webform_submission:values:contrato_anticipo]<span>&nbsp;euros. </span></span></p>\\n\\n<p><strong>Cuarto</strong>.— En todo caso, tras el trabajo de reproducción y edición por parte del editor de la obra, los originales entregados (en caso de entregas no digitales) deberán ser retornados a su autor, que podrá disponer de ellos libremente, siempre que ello no sea contrario a las cláusulas del contrato de edición firmado con el editor .</p>\\n\\n<p><span><strong>Quinto.</strong>— En caso de que el editor no diese su conformidad a la obra encargada por no atenerse a las características y especificaciones contempladas en el anexo numero uno de este contrato y el autor no realizase las modificaciones propuestas por el editor , este quedará liberado de la obligación de efectuar los pagos restantes, aunque deberá garantizar siempre y en todo caso al autor una cantidad mínima de [webform_submission:values:contrato_minimo] euros.</span></p>\\n\\n<p><span><strong>Sexto</strong>.— El editor remitirá al autor las pruebas de la obra, impresas en papel o digitales, y este último deberá retornarlas de nuevo al editor en un plazo máximo de diez días, dando su conformidad e indicando de forma clara las correcciones y observaciones que estime pertinentes a fin de adaptarlas al máximo al original de la obra. </span></p>\\n\\n<p><span>Transcurrido dicho plazo, si el autor no ha devuelto las pruebas, el editor podrá realizar las correcciones técnicas que estime oportunas, sin que se pueda exigir ningún tipo de responsabilidad si el resultado no fuera satisfactorio para el autor.</span></p>\\n\\n<p><span>En el supuesto de que el editor no recoja los cambios propuestos por el autor, siempre y cuando no impliquen un cambio substancial de la obra dicho incumplimiento será causa de rescisión del contrato. Debiendo por ello indemnizar el editor al autor por los gastos que su trabajo haya devengado.</span></p>\\n\\n<p><span><strong>Séptimo</strong>.— Como causas de resolución del contrato por incumplimiento se establecen:</span></p>\\n\\n<p><span>a) No entregarse las obras encargadas dentro del plazo convenido para ello, tras requerimiento expreso del editor en el plazo de una semana desde el día en que debían ser entregadas.</span></p>\\n\\n<p><span>b) Si el autor no realiza las modificaciones propuestas por el editor, siempre que sea de acuerdo con las características prefijadas de la obra.</span></p>\\n\\n<p><span>c) Si el editor no recoge las modificaciones y correcciones del autor, sin perjuicio de la reclamación que por daños y perjuicios pueda corresponderle.</span></p>\\n\\n<p><span><strong>Octavo</strong>.— El presente contrato se regirá y será interpretado conforme a lo previsto en el Real Decreto Legislativo 1/1996, de 12 de abril, por el que se aprueba el Texto Refundido de la Ley de Propiedad Intelectual y, en general, por las disposiciones legales que le sean de aplicación.</span></p>\\n\\n<p><span><strong>Noveno</strong>.— Ambas partes se someten, para cualquier diferencia que pudiera surgir de la interpretación y cumplimiento del presente contrato a la jurisdicción y competencia de los Juzgados y Tribunales de la ciudad de&nbsp; [webform_submission:values:contrato_lugar:city] renunciando a su propio fuero, de ser otro.</span></p>\\n\\n<p><span>Y en prueba de su conformidad, lo firman por duplicado en la fecha y lugar señalados en el encabezamiento.</span></p>\\n\\n<p>&nbsp;</p>\\n\"\n    '#format': basic_html\n"
+css: ''
+javascript: ''
+settings:
+  ajax: true
+  ajax_scroll_top: page
+  ajax_progress_type: throbber
+  ajax_effect: slide
+  ajax_speed: null
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  page_admin_theme: false
+  form_title: both
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_remote_addr: true
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  submission_label: ''
+  submission_log: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: page
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  results_customize: false
+  token_view: false
+  token_update: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers: {  }
+variants: {  }
+uuid: 4daf6e34-d9a0-43b5-aca9-34f06121ce77

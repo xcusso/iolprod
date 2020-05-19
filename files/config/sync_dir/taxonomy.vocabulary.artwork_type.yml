@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 name: 'Artwork type'
 vid: artwork_type
-description: 'Type of artwork'
+description: 'Type of artwork (Illustration, 3D model'
 weight: 0

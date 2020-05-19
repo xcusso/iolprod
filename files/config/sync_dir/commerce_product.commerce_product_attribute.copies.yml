@@ -1,0 +1,7 @@
+uuid: 49ec60db-f786-4eca-bdeb-1fe1c1e2d7f0
+langcode: en
+status: true
+dependencies: {  }
+id: copies
+label: Copies
+elementType: select

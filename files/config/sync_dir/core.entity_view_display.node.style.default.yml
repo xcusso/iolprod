@@ -3,6 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.style.field_abstract_realistic
+    - field.field.node.style.field_detail_level
+    - field.field.node.style.field_enabled
     - field.field.node.style.field_style_artist
     - field.field.node.style.field_style_artwork_types
     - field.field.node.style.field_style_category
@@ -11,17 +14,236 @@ dependencies:
     - field.field.node.style.field_style_tags
     - image.style.thumbnail
     - node.type.style
+    - views.view.artist
+    - views.view.style
+    - views.view.style_slick
   module:
     - image
+    - layout_builder
+    - layout_discovery
+    - options
     - text
     - user
+    - views
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: slick_section
+        components:
+          de642951-b752-4423-9556-711281eced0c:
+            uuid: de642951-b752-4423-9556-711281eced0c
+            region: content
+            configuration:
+              id: 'views_block:style_slick-block_2'
+              label: ''
+              provider: views
+              label_display: visible
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: flag_section
+          column_widths: 50-50
+        components:
+          6f3389e6-e956-496a-9101-f88190233f43:
+            uuid: 6f3389e6-e956-496a-9101-f88190233f43
+            region: first
+            configuration:
+              id: 'extra_field_block:node:style:flag_style_select'
+              label: 'Flag: <em class="placeholder">Style select</em>'
+              provider: layout_builder
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          646eea72-dccb-4b52-8661-d53b26392b94:
+            uuid: 646eea72-dccb-4b52-8661-d53b26392b94
+            region: second
+            configuration:
+              id: 'extra_field_block:node:style:flag_style_tag'
+              label: 'Flag: <em class="placeholder">Style tag</em>'
+              provider: layout_builder
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_threecol_section
+        layout_settings:
+          label: style_category_section
+          column_widths: 25-25-50
+        components:
+          b9c9eefc-4f7d-45fc-add4-4b702dce7410:
+            uuid: b9c9eefc-4f7d-45fc-add4-4b702dce7410
+            region: third
+            configuration:
+              id: 'field_block:node:style:field_style_tags'
+              label: 'Style tags'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          183ff3bd-b758-4b70-9b4c-a311bf43f919:
+            uuid: 183ff3bd-b758-4b70-9b4c-a311bf43f919
+            region: second
+            configuration:
+              id: 'field_block:node:style:field_style_category'
+              label: 'Style category'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          478be1cd-a4fa-4aae-b0a6-8b3af0dda08d:
+            uuid: 478be1cd-a4fa-4aae-b0a6-8b3af0dda08d
+            region: first
+            configuration:
+              id: 'field_block:node:style:field_abstract_realistic'
+              label: 'Abstract - Realistic'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: list_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          97817fad-45c2-40ca-877d-f1a2939eeb49:
+            uuid: 97817fad-45c2-40ca-877d-f1a2939eeb49
+            region: first
+            configuration:
+              id: 'field_block:node:style:field_detail_level'
+              label: 'Detail level'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: list_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 1
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: style_details_section
+          column_widths: 50-50
+        components:
+          681705d0-8b31-4b3e-a08d-ca8b3700ee48:
+            uuid: 681705d0-8b31-4b3e-a08d-ca8b3700ee48
+            region: first
+            configuration:
+              id: 'views_block:artist-block_1'
+              label: ''
+              provider: views
+              label_display: visible
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+          e5fcf3b2-80ca-4b07-87df-08b67e47dcea:
+            uuid: e5fcf3b2-80ca-4b07-87df-08b67e47dcea
+            region: second
+            configuration:
+              id: 'field_block:node:style:field_style_description'
+              label: 'Style description'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: text_summary_or_trimmed
+                settings:
+                  trim_length: 200
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          a6c41cae-fb17-48bc-9448-839b389ba839:
+            uuid: a6c41cae-fb17-48bc-9448-839b389ba839
+            region: first
+            configuration:
+              id: 'views_block:style-block_2'
+              label: ''
+              provider: views
+              label_display: visible
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 2
+        third_party_settings: {  }
 id: node.style.default
 targetEntityType: node
 bundle: style
 mode: default
 content:
+  field_abstract_realistic:
+    weight: 8
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_detail_level:
+    weight: 10
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_enabled:
+    weight: 9
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
   field_style_artist:
-    weight: 106
+    weight: 3
     label: above
     settings:
       link: true
@@ -29,7 +251,7 @@ content:
     type: entity_reference_label
     region: content
   field_style_artwork_types:
-    weight: 108
+    weight: 6
     label: above
     settings:
       link: true
@@ -37,7 +259,7 @@ content:
     type: entity_reference_label
     region: content
   field_style_category:
-    weight: 103
+    weight: 4
     label: above
     settings:
       link: true
@@ -45,14 +267,14 @@ content:
     type: entity_reference_label
     region: content
   field_style_description:
-    weight: 102
+    weight: 2
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_style_image:
-    weight: 105
+    weight: 1
     label: above
     settings:
       image_style: thumbnail
@@ -61,7 +283,7 @@ content:
     type: image
     region: content
   field_style_tags:
-    weight: 104
+    weight: 5
     label: above
     settings:
       link: true
@@ -69,14 +291,22 @@ content:
     type: entity_reference_label
     region: content
   flag_style_select:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  flag_style_tag:
     weight: 10
     settings: {  }
     third_party_settings: {  }
     region: content
   links:
-    weight: 100
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
   langcode: true

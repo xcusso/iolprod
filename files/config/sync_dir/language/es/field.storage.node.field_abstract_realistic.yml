@@ -1,0 +1,24 @@
+settings:
+  allowed_values:
+    -
+      label: 'Super abstracto'
+    -
+      label: Abstracto
+    -
+      label: 'Mas abstracto'
+    -
+      label: 'Medio abstracto'
+    -
+      label: 'Un poco abstracto'
+    -
+      label: Equilibrado
+    -
+      label: 'Un poco realista'
+    -
+      label: 'Medio realista'
+    -
+      label: 'Mas realista'
+    -
+      label: Realista
+    -
+      label: 'Super realista'

@@ -1,0 +1,18 @@
+uuid: 129a69cb-e00d-4b5c-b493-ea404ec44c7c
+langcode: en
+status: true
+dependencies: {  }
+id: split_test
+label: ioltest
+description: 'Configuracions que no han de ser en el test'
+folder: ../files/config/split_test
+module:
+  coming_soon: 0
+theme: {  }
+blacklist:
+  - color.theme.bartik
+graylist:
+  - color.theme.bartik
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 4

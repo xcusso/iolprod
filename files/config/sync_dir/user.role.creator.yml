@@ -4,15 +4,20 @@ status: true
 dependencies: {  }
 id: creator
 label: Creator
-weight: -7
+weight: -6
 is_admin: null
 permissions:
   - 'create artist content'
   - 'create content translations'
   - 'create style content'
+  - 'create terms in private_tags'
+  - 'create terms in tags'
+  - 'delete terms in private_tags'
   - 'edit own artist content'
   - 'edit own style content'
+  - 'edit terms in private_tags'
   - 'translate artist node'
   - 'translate artwork_type taxonomy_term'
   - 'translate style node'
   - 'view own unpublished content'
+  - 'view own webform submission'

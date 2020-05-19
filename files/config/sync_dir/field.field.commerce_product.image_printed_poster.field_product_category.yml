@@ -1,0 +1,29 @@
+uuid: 92037a3f-37ff-4fc3-acca-54d58acfd144
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.image_printed_poster
+    - field.storage.commerce_product.field_product_category
+    - taxonomy.vocabulary.product_category
+id: commerce_product.image_printed_poster.field_product_category
+field_name: field_product_category
+entity_type: commerce_product
+bundle: image_printed_poster
+label: 'Product category'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      product_category: product_category
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

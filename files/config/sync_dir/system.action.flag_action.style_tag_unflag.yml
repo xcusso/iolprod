@@ -1,0 +1,15 @@
+uuid: 7f775a0d-877f-4b58-be47-a6971ef4d28e
+langcode: en
+status: true
+dependencies:
+  config:
+    - flag.flag.style_tag
+  module:
+    - flag
+id: flag_action.style_tag_unflag
+label: 'Untag this item'
+type: node
+plugin: 'flag_action:style_tag_unflag'
+configuration:
+  flag_id: style_tag
+  flag_action: unflag

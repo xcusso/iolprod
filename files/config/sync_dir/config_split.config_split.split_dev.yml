@@ -1,0 +1,19 @@
+uuid: fc329493-8ff0-4b06-8f27-c6f7d583d56e
+langcode: en
+status: true
+dependencies: {  }
+id: split_dev
+label: ioldev
+description: 'Configuracions que no han de ser en el ioldev'
+folder: ../files/config/split_dev
+module:
+  devel_generate: 0
+  masquerade: 0
+theme: {  }
+blacklist:
+  - color.theme.bartik
+  - views.view.user
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 3

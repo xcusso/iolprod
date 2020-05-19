@@ -12,10 +12,24 @@ field_name: field_company_address
 entity_type: node
 bundle: company
 label: 'Company address'
-description: 'Address of the company'
-required: false
+description: 'Address and organization name of the company'
+required: true
 translatable: false
-default_value: {  }
+default_value:
+  -
+    langcode: en
+    country_code: ES
+    administrative_area: ''
+    locality: ''
+    dependent_locality: null
+    postal_code: ''
+    sorting_code: null
+    address_line1: ''
+    address_line2: ''
+    organization: ''
+    given_name: ''
+    additional_name: null
+    family_name: null
 default_value_callback: ''
 settings:
   available_countries: {  }
@@ -28,7 +42,7 @@ settings:
     familyName:
       override: hidden
     organization:
-      override: hidden
+      override: optional
     addressLine1:
       override: optional
     addressLine2:

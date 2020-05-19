@@ -3,14 +3,108 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.base_field_override.node.artist.title
     - field.field.node.artist.field_artist_image
     - field.field.node.artist.field_artist_profile
-    - image.style.thumbnail
+    - field.field.node.artist.field_enabled
+    - image.style.focal_point_square_200px
     - node.type.artist
+    - views.view.style
   module:
     - image
+    - layout_builder
+    - layout_discovery
     - text
     - user
+    - views
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: artist_name_section
+        components:
+          c0665f97-0dbb-4226-80d9-7ad48f109588:
+            uuid: c0665f97-0dbb-4226-80d9-7ad48f109588
+            region: content
+            configuration:
+              id: 'field_block:node:artist:title'
+              label: 'Artist name'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: Artist_profile_section
+          column_widths: 50-50
+        components:
+          f1513ac6-7dad-4ae7-8a40-2eaab934f410:
+            uuid: f1513ac6-7dad-4ae7-8a40-2eaab934f410
+            region: first
+            configuration:
+              id: 'field_block:node:artist:field_artist_image'
+              label: 'Artist image'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: image
+                settings:
+                  image_style: ''
+                  image_link: ''
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          472daf08-8c72-4c4f-82d2-2f434c1fe870:
+            uuid: 472daf08-8c72-4c4f-82d2-2f434c1fe870
+            region: second
+            configuration:
+              id: 'field_block:node:artist:field_artist_profile'
+              label: 'Artist profile'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          e3128ffb-c417-483e-94db-7263f2610940:
+            uuid: e3128ffb-c417-483e-94db-7263f2610940
+            region: first
+            configuration:
+              id: 'views_block:style-block_1'
+              label: ''
+              provider: views
+              label_display: visible
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 1
+        third_party_settings: {  }
 id: node.artist.default
 targetEntityType: node
 bundle: artist
@@ -20,7 +114,7 @@ content:
     weight: 1
     label: above
     settings:
-      image_style: thumbnail
+      image_style: focal_point_square_200px
       image_link: ''
     third_party_settings: {  }
     type: image
@@ -32,10 +126,23 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
+  field_enabled:
+    weight: 3
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
   links:
     weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
   langcode: true

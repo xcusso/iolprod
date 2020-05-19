@@ -1,0 +1,201 @@
+uuid: bb994453-6c4f-42f2-b00e-c0de9134d71f
+langcode: en
+status: closed
+dependencies: {  }
+open: null
+close: null
+weight: 0
+uid: 1
+template: true
+archive: false
+id: client_evaluation_r2
+title: 'Client evaluation R2'
+description: ''
+category: Utilities
+elements: "company:\n  '#type': fieldset\n  '#title': Company\n  message_10:\n    '#type': webform_message\n    '#states':\n      visible:\n        ':input[name=\"order_company\"]':\n          value: Other\n        ':input[name=\"new_company_name\"]':\n          empty: true\n    '#message_type': info\n    '#message_message': |\n      Welcome. Aqui puedes calificar tus clientes en base tu experiencia.&nbsp;<br />\n      Para empezar selecciona la empresa o crea un nuevo registro.\n      \n    '#message_close': true\n  company_flexbox:\n    '#type': webform_flexbox\n    existing_company:\n      '#type': fieldset\n      '#title': 'Existing company'\n      order_company:\n        '#type': webform_entity_select\n        '#title': 'Select a company'\n        '#description': 'Selecciona la empresa de la que quieres escribir una rese&ntilde;a. Si no esta en la lista, selecciona otra e introduce los datos de la empresa.'\n        '#title_display': before\n        '#description_display': after\n        '#help_display': element_after\n        '#empty_option': Other\n        '#empty_value': Other\n        '#target_type': node\n        '#selection_handler': views\n        '#selection_settings':\n          view:\n            view_name: company\n            display_name: entity_reference_1\n            arguments: {  }\n      message_new_company:\n        '#type': webform_message\n        '#states':\n          invisible:\n            - ':input[name=\"new_company_name\"]':\n                empty: true\n            - or\n            - ':input[name=\"order_date\"]':\n                filled: true\n        '#message_type': info\n        '#message_message': 'Be sure that your company is not yet in our database.'\n        '#message_close': true\n    new_company:\n      '#type': fieldset\n      '#title': 'New company'\n      '#states':\n        visible:\n          ':input[name=\"order_company\"]':\n            value: Other\n      new_company_name:\n        '#type': textfield\n        '#title': 'Company name'\n        '#required': true\n      new_company_city:\n        '#type': textfield\n        '#title': City\n        '#required': true\n        '#states':\n          visible:\n            ':input[name=\"new_company_name\"]':\n              filled: true\n      new_company_country:\n        '#type': select\n        '#title': Country\n        '#options': country_codes\n        '#required': true\n        '#states':\n          visible:\n            ':input[name=\"new_company_city\"]':\n              filled: true\ncomission:\n  '#type': webform_flexbox\n  '#title': Comission\n  '#states':\n    invisible:\n      ':input[name=\"order_company\"]':\n        value: Other\n      ':input[name=\"new_company_country\"]':\n        empty: true\n  '#states_clear': false\n  comission_flexbox:\n    '#type': fieldset\n    '#title': 'Date and rating'\n    '#flex': 2\n    message_20:\n      '#type': webform_message\n      '#states':\n        visible:\n          ':input[name=\"order_date\"]':\n            empty: true\n      '#message_type': info\n      '#message_message': 'Insert the date when the comission was produced.'\n    order_date:\n      '#type': date\n      '#title': 'Fecha del encargo'\n      '#description': 'Indicar cuando se produjo el encargo. Si no se recuerda la fecha exacta, indicar una fecha aproximada. No se aceptan fechas anteriores a 5 a&ntilde;os.'\n      '#size': '2'\n      '#required': true\n      '#flex': 2\n      '#date_date_min': '- 5 years'\n      '#date_date_max': today\n      '#date_date_format': ''\n    message_50:\n      '#type': webform_message\n      '#states':\n        invisible:\n          - ':input[name=\"order_type[select]\"]':\n              empty: true\n          - or\n          - ':input[name=\"rating_global\"]':\n              value:\n                greater: '0'\n      '#message_type': info\n      '#message_message': 'Rate your global experience'\n    rating_global:\n      '#type': webform_rating\n      '#title': 'Global rating'\n      '#description': 'Valoraci&oacute;n global'\n      '#required': true\n      '#flex': 2\n      '#states':\n        visible:\n          ':input[name=\"order_type[select]\"]':\n            filled: true\n      '#states_clear': false\n      '#step': 0\n  comission_type:\n    '#type': fieldset\n    '#title': 'Comission type'\n    '#flex': 4\n    '#states':\n      visible:\n        ':input[name=\"order_date\"]':\n          filled: true\n    message_30:\n      '#type': webform_message\n      '#states':\n        visible:\n          ':input[name=\"order_type[select]\"]':\n            empty: true\n      '#message_type': info\n      '#message_message': 'Select the type of comission.'\n    order_type:\n      '#type': webform_select_other\n      '#title': 'Tipo de encargo'\n      '#title_display': inline\n      '#options': comission_type\n      '#other__option_label': Otro…\n      '#other__placeholder': 'Introducir otro…'\n      '#required': true\n      '#flex': 2\n    message_40:\n      '#type': webform_message\n      '#states':\n        visible:\n          ':input[name=\"order_description\"]':\n            empty: true\n          ':input[name=\"order_type[select]\"]':\n            filled: true\n      '#message_type': info\n      '#message_message': 'If you want, tell us more about the comission'\n    order_description:\n      '#type': textarea\n      '#title': 'Descripción del encargo'\n      '#flex': 2\n      '#states':\n        visible:\n          ':input[name=\"order_type[select]\"]':\n            filled: true\nratings:\n  '#type': fieldset\n  '#title': 'Detailed Ratings'\n  '#states':\n    invisible:\n      ':input[name=\"rating_global\"]':\n        value: '0'\n  message_60:\n    '#type': webform_message\n    '#states':\n      visible:\n        ':input[name=\"rating_global\"]':\n          value:\n            greater: '3'\n    '#message_type': info\n    '#message_message': 'If you want you can rate each category'\n    '#message_close': true\n  message_70:\n    '#type': webform_message\n    '#states':\n      visible:\n        ':input[name=\"rating_global\"]':\n          value:\n            less: '3'\n        ':input[name=\"order_type[select]\"]':\n          filled: true\n    '#message_type': warning\n    '#message_message': 'Please fill your rate in this categories'\n    '#message_close': true\n  detailed_ratings:\n    '#type': webform_flexbox\n    '#title': 'Detailed ratings'\n    details:\n      '#type': webform_likert\n      '#title': Details\n      '#states':\n        required:\n          ':input[name=\"rating_global\"]':\n            value:\n              less: '3'\n      '#questions':\n        Order: 'Order -- How was the contact'\n        Remuneration: 'Remuneration -- How was the offered payment'\n        Schedule: 'Schedule -- How much time to create'\n        Relationship: 'Relationship -- The contact with the company'\n        Production: 'Production -- About how your creation is integrated'\n        Agreement: 'Agreement -- How was your agreement deal?'\n        Payment: 'Payment -- Your earn the promised payments or royalties?'\n      '#questions_description_display': help\n      '#answers': likert_satisfaction\n    issues:\n      '#type': fieldset\n      '#title': Issues\n      '#states':\n        visible:\n          - ':input[name=\"details[Order]\"]':\n              value:\n                less: '3'\n          - or\n          - ':input[name=\"details[Remuneration]\"]':\n              value:\n                less: '3'\n          - or\n          - ':input[name=\"details[Schedule]\"]':\n              value:\n                less: '3'\n          - or\n          - ':input[name=\"details[Relationship]\"]':\n              value:\n                less: '3'\n          - or\n          - ':input[name=\"details[Production]\"]':\n              value:\n                less: '3'\n          - or\n          - ':input[name=\"details[Agreement]\"]':\n              value:\n                less: '3'\n          - or\n          - ':input[name=\"details[Payment]\"]':\n              value:\n                less: '3'\n      issues_order:\n        '#type': webform_select_other\n        '#title': 'Order issues'\n        '#multiple': true\n        '#options':\n          'Poco claro': 'Poco claro'\n          Contradictorio: Contradictorio\n          Impreciso: Impreciso\n        '#select2': true\n        '#states':\n          visible:\n            ':input[name=\"details[Order]\"]':\n              value:\n                less: '3'\n          required:\n            ':input[name=\"details[Order]\"]':\n              value:\n                less: '3'\n            ':input[name=\"rating_global\"]':\n              value:\n                less: '3'\n      issues_remuneration:\n        '#type': webform_select_other\n        '#title': 'Remuneration issues'\n        '#multiple': true\n        '#options':\n          Insuficiente: Insuficiente\n          'No definido': 'No definido'\n          'Solo royalties': 'Solo royalties'\n        '#select2': true\n        '#states':\n          visible:\n            ':input[name=\"details[Remuneration]\"]':\n              value:\n                less: '3'\n          required:\n            ':input[name=\"details[Remuneration]\"]':\n              value:\n                less: '3'\n            ':input[name=\"rating_global\"]':\n              value:\n                less: '3'\n      issues_schedule:\n        '#type': webform_select_other\n        '#title': 'Schedule issues'\n        '#multiple': true\n        '#options':\n          Insuficiente: Insuficiente\n          'No definido': 'No definido'\n          'Demasiado urgente': 'Demasiado urgente'\n        '#select2': true\n        '#states':\n          visible:\n            ':input[name=\"details[Schedule]\"]':\n              value:\n                less: '3'\n          required:\n            ':input[name=\"details[Schedule]\"]':\n              value:\n                less: '3'\n            ':input[name=\"rating_global\"]':\n              value:\n                less: '3'\n      issues_relationship:\n        '#type': webform_select_other\n        '#title': 'Relationship issues'\n        '#multiple': true\n        '#options':\n          'Es dificil contactar': 'Es dificil contactar'\n          'Trato incorrecto': 'Trato incorrecto'\n          'Diversos interlocutores': 'Diversos interlocutores'\n          'Falta de coordinación interna': 'Falta de coordinación interna'\n        '#select2': true\n        '#states':\n          visible:\n            ':input[name=\"details[Relationship]\"]':\n              value:\n                less: '3'\n          required:\n            ':input[name=\"details[Relationship]\"]':\n              value:\n                less: '3'\n            ':input[name=\"rating_global\"]':\n              value:\n                less: '3'\n      issues_production:\n        '#type': webform_select_other\n        '#title': 'Production issues'\n        '#multiple': true\n        '#options':\n          'Piden muchos cambios': 'Piden muchos cambios'\n          'Modifican arte final': 'Modifican arte final'\n          'Comunican cambios a ultima hora': 'Comunican cambios a ultima hora'\n          'No pagan las pruebas': 'No pagan las pruebas'\n          'No revisan bien': 'No revisan bien'\n        '#select2': true\n        '#states':\n          visible:\n            ':input[name=\"details[Production]\"]':\n              value:\n                less: '3'\n          required:\n            ':input[name=\"details[Production]\"]':\n              value:\n                less: '3'\n            ':input[name=\"rating_global\"]':\n              value:\n                less: '3'\n      issues_agreement:\n        '#type': webform_select_other\n        '#title': 'Agreement issues'\n        '#multiple': true\n        '#options':\n          'No hacen contrato': 'No hacen contrato'\n          'Clausulas abusivas': 'Clausulas abusivas'\n          'Bajos royalties': 'Bajos royalties'\n          'Documentos falsos': 'Documentos falsos'\n          'Cesion a terceros sin consentimiento': 'Cesion a terceros sin consentimiento'\n        '#select2': true\n        '#states':\n          visible:\n            ':input[name=\"details[Agreement]\"]':\n              value:\n                less: '3'\n          required:\n            ':input[name=\"details[Agreement]\"]':\n              value:\n                less: '3'\n            ':input[name=\"rating_global\"]':\n              value:\n                less: '3'\n      issues_payment:\n        '#type': webform_select_other\n        '#title': 'Payment issues'\n        '#multiple': true\n        '#options':\n          'No pagan': 'No pagan'\n          'Pagan con mucho retraso': 'Pagan con mucho retraso'\n          'Royalties no creibles': 'Royalties no creibles'\n          'No ingresan/declaran IRPF': 'No ingresan/declaran IRPF'\n        '#select2': true\n        '#states':\n          visible:\n            ':input[name=\"details[Payment]\"]':\n              value:\n                less: '3'\n          required:\n            ':input[name=\"details[Payment]\"]':\n              value:\n                less: '3'\n            ':input[name=\"rating_global\"]':\n              value:\n                less: '3'\ncomments:\n  '#type': textarea\n  '#title': Comments/Observations\n  '#states':\n    visible:\n      ':input[name=\"rating_global\"]':\n        value:\n          between: '1:5'\nrating_computed:\n  '#type': webform_computed_twig\n  '#title': 'Computed rating'\n  '#display_on': view\n  '#template': |\n    {{ \n    (( data.rating_order * 1 ) + \n    ( data.rating_remuneration * 1 ) +\n    ( data.rating_schedule * 1 ) +\n    ( data.rating_relationship * 1 ) +\n    ( data.rating_production * 1 ) +\n    ( data.rating_agreement * 1 ) +\n    ( data.rating_payment * 1)) /  7\n    }}\n    {# Cada varaiable li podem donar un pes especific 1 max 0,1 equival a un 10%. Cal sumar i dividir per el numero de factors #}\n    \n  '#store': true\n  '#ajax': true\nterms_of_service:\n  '#type': webform_terms_of_service\n  '#required': true\n  '#required_error': 'Please, accept this terms of service'\n  '#states':\n    visible:\n      ':input[name=\"rating_global\"]':\n        value:\n          between: '1:5'\n  '#access_create_roles':\n    - creator\n    - supervisor\n    - administrator\n  '#access_update_roles':\n    - supervisor\n    - administrator\n  '#access_view_roles':\n    - creator\n    - supervisor\n    - administrator\n  '#terms_title': 'Condiciones de uso'\n  '#terms_content': |\n    <p>La valoraci&oacute; dels clients ha de ser vera&ccedil; i objectiva.</p>\n    \n    <p>Tan sols s&rsquo;acceptar&agrave;n les valoracions d&#39;experiencies propies verificables.</p>\n    \n    <p>IOL pot sol.licitar documentaci&oacute; per comprovar determines valoracions.</p>\n    \n    <p>IOL es reserva el dret de suprimir aquelles valoracions sospitosses de ser falses, inexactes o difamatories.</p>\n    \n    <p>La publicaci&oacute; de valoracions negatives que no s&#39;ajustin a la realitat pot comportar la suspensi&oacute; i fins i tot la cancelaci&oacute; del compte del usuari.</p>"
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: ''
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  page_admin_theme: false
+  form_title: both
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_remote_addr: true
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  submission_label: ''
+  submission_log: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: inline
+  confirmation_title: ''
+  confirmation_message: "Gr&agrave;cies per enviar la teva valoraci&oacute;. Iniciem el proc&eacute;s de validaci&oacute; per poder publicar-la.<br />\r\nLes dades ser&agrave;n mostrades de forma anonima."
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  results_customize: false
+  token_view: false
+  token_update: false
+access:
+  create:
+    roles:
+      - creator
+      - supervisor
+      - administrator
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles:
+      - supervisor
+      - administrator
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles:
+      - supervisor
+      - administrator
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles:
+      - supervisor
+      - administrator
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles:
+      - supervisor
+      - administrator
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles:
+      - creator
+      - supervisor
+      - administrator
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles:
+      - creator
+      - supervisor
+      - administrator
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles:
+      - supervisor
+      - administrator
+    users: {  }
+    permissions: {  }
+  administer:
+    roles:
+      - supervisor
+      - administrator
+    users: {  }
+    permissions: {  }
+  test:
+    roles:
+      - administrator
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles:
+      - administrator
+    users: {  }
+    permissions: {  }
+handlers: {  }
+variants: {  }

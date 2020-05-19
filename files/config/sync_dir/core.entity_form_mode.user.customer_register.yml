@@ -1,0 +1,10 @@
+uuid: d248ae1b-5a0d-42e2-91e2-2e36f5110bf2
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.customer_register
+label: 'Customer register'
+targetEntityType: user
+cache: true

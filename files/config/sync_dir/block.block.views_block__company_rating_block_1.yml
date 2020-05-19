@@ -1,0 +1,40 @@
+uuid: 3143eb62-8dd7-4c6d-9d28-26081fc44c5c
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.company_rating
+  module:
+    - system
+    - user
+    - views
+  theme:
+    - bartik
+id: views_block__company_rating_block_1
+theme: bartik
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:company_rating-block_1'
+settings:
+  id: 'views_block:company_rating-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      creator: creator
+      supervisor: supervisor
+      administrator: administrator
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+  request_path:
+    id: request_path
+    pages: /customer/rating
+    negate: false
+    context_mapping: {  }

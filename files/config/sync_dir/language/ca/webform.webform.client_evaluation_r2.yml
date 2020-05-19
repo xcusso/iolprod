@@ -1,0 +1,4 @@
+title: 'Evaluació del client v 0.4'
+description: 'Webform per evaluar als clients'
+category: Utilitats
+elements: "terms_of_service:\n  '#terms_title': 'Condicions d''us'\norder_company:\n  '#title': Empresa\n  '#description': 'Selecciona l''empresa sobre la que vols escriure una evaluació. Si no està a la llista, selecciona ''Altre'' i introdueix les dades que coneguis sobre l''empresa.'\norder_new_company:\n  '#title': 'Nova empresa'\norder_date:\n  '#title': 'Data del encàrrec'\n  '#description': 'Indiqueu en quina data s''ha produït l''encàrrec. Si no es recorda la data exacte, indiqueu-ne una d''aproximada.'\norder_type:\n  '#title': 'Tipus d''encàrrec'\n  '#options':\n    Personaje: 'Creació d''un personatge'\n    Ilustración: Il.lustració\n    Album: 'Album il.lustrat'\n  '#other__option_label': Altre…\n  '#other__placeholder': 'Introduir altre…'\n"

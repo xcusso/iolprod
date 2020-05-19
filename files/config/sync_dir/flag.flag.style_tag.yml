@@ -1,0 +1,37 @@
+uuid: 9bac9521-f941-4ae8-be7f-9194287fc08a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: style_tag
+label: 'Style tag'
+bundles:
+  - style
+entity_type: node
+global: false
+weight: 0
+flag_short: 'Tag this item'
+flag_long: 'You can private tag this style.'
+flag_message: Tagged
+unflag_short: 'Modify tags'
+unflag_long: 'Modify your personal tags for this item'
+unflag_message: Modified
+unflag_denied_text: ''
+flag_type: 'entity:node'
+link_type: field_entry
+flagTypeConfig:
+  show_in_links: {  }
+  show_as_field: true
+  show_on_form: false
+  show_contextual_link: false
+  extra_permissions:
+    owner: '0'
+linkTypeConfig:
+  flag_confirmation: 'Enter flagging details'
+  unflag_confirmation: 'Unflag this content?'
+  flag_create_button: 'Create flagging'
+  flag_delete_button: 'Delete flagging'
+  form_behavior: modal
+  edit_flagging: 'Edit flagging details'
+  flag_update_button: 'Update flagging'

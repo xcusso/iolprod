@@ -1,0 +1,12 @@
+uuid: d5fd5a40-4d5c-47e2-a598-bf446cb25ddb
+langcode: en
+status: true
+dependencies: {  }
+id: focal_point_square
+label: 'Square crop'
+description: 'Crop tipus per generar imatges quadrades amb el focal point.'
+aspect_ratio: '1:1'
+soft_limit_width: 300
+soft_limit_height: 300
+hard_limit_width: 200
+hard_limit_height: 200

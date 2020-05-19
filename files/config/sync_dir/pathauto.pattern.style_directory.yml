@@ -1,0 +1,22 @@
+uuid: a156b6fe-bb5c-4c05-b464-85fc6447e873
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: style_directory
+label: 'Style directory'
+type: 'canonical_entities:node'
+pattern: '/style/[node:title]'
+selection_criteria:
+  07067331-4f8f-4f9d-9793-55228ca8cf99:
+    id: node_type
+    bundles:
+      style: style
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 07067331-4f8f-4f9d-9793-55228ca8cf99
+selection_logic: and
+weight: -5
+relationships: {  }

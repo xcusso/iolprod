@@ -1,0 +1,54 @@
+uuid: 8b907491-a046-4ecc-9170-ce08e458ed5d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_abstract_realistic
+field_name: field_abstract_realistic
+entity_type: node
+type: list_integer
+settings:
+  allowed_values:
+    -
+      value: -5
+      label: 'Super abstract'
+    -
+      value: -4
+      label: Abstract
+    -
+      value: -3
+      label: 'More abstract'
+    -
+      value: -2
+      label: 'Medium abstract'
+    -
+      value: -1
+      label: 'Little abstract'
+    -
+      value: 0
+      label: Balanced
+    -
+      value: 1
+      label: 'Little realistic'
+    -
+      value: 2
+      label: 'Medium realistic'
+    -
+      value: 3
+      label: 'More realistic'
+    -
+      value: 4
+      label: Realistic
+    -
+      value: 5
+      label: 'Super realistic'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

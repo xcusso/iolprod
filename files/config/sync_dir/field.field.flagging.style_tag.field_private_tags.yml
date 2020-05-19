@@ -1,0 +1,29 @@
+uuid: 8ce13719-4754-43f1-9166-49b53cd84e28
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.flagging.field_private_tags
+    - flag.flag.style_tag
+    - taxonomy.vocabulary.private_tags
+id: flagging.style_tag.field_private_tags
+field_name: field_private_tags
+entity_type: flagging
+bundle: style_tag
+label: 'Private tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      private_tags: private_tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

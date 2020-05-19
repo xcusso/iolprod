@@ -1,0 +1,9 @@
+uuid: fc8a381d-92e5-4250-bb98-207358e4d9fa
+langcode: en
+status: true
+dependencies: {  }
+id: comission_type
+label: 'Type of comission'
+category: IOL
+likert: false
+options: "'Ilustracion simple': 'Ilustracion simple'\n'Album ilustrado': 'Album ilustrado'\n'Portada de libro': 'Portada de libro'\n'Creación de personaje': 'Creación de personaje'\n"

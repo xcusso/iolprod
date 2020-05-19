@@ -1,0 +1,18 @@
+uuid: 45f628ac-d4cf-48cd-b302-2851774c5af4
+langcode: ca
+status: true
+dependencies:
+  config:
+    - node.type.company
+id: node.company.created
+field_name: created
+entity_type: node
+bundle: company
+label: 'Elaborat el'
+description: 'L''hora en què es va crear el node.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

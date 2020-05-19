@@ -10,10 +10,10 @@ id: node.style.field_style_artwork_types
 field_name: field_style_artwork_types
 entity_type: node
 bundle: style
-label: 'Style artwork types'
-description: ''
+label: 'Tipus de creació del estil'
+description: 'Seleccioneu el(s) tipus de creació que permet aquest estil.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

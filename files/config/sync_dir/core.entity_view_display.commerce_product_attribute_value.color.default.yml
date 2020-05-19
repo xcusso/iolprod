@@ -1,0 +1,33 @@
+uuid: 7f95f4db-71ec-4e17-9de8-21b487888539
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_attribute.color
+    - field.field.commerce_product_attribute_value.color.field_color_detail
+id: commerce_product_attribute_value.color.default
+targetEntityType: commerce_product_attribute_value
+bundle: color
+mode: default
+content:
+  field_color_detail:
+    weight: -4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  name:
+    label: hidden
+    type: string
+    weight: -5
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true

@@ -1,0 +1,9 @@
+uuid: face08df-ce81-4884-a8d5-5c6e0f323f1e
+langcode: en
+status: true
+dependencies: {  }
+id: formato_libro_electronico
+label: 'Formato libro electronico'
+category: IOL
+likert: false
+options: "ePub: ePub\nPDF: PDF\nmobi: mobi\n"

@@ -1,0 +1,10 @@
+uuid: 7e181c18-cfd5-478b-b50c-aeb6fe1aa7fd
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.customer_account
+label: 'Customer account'
+targetEntityType: user
+cache: true

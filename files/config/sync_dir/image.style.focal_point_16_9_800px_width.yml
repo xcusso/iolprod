@@ -1,0 +1,17 @@
+uuid: 35d9fb83-514d-40f7-837d-abdae2c9ebf4
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: focal_point_16_9_800px_width
+label: 'Focal point 16:9 800px width'
+effects:
+  3a4c9493-c499-4eca-a823-596479253f90:
+    uuid: 3a4c9493-c499-4eca-a823-596479253f90
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 800
+      height: 450
+      crop_type: focal_point

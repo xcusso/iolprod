@@ -1,0 +1,55 @@
+uuid: 3ccac674-0609-4234-a1f0-9355b37bf55d
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.image_printed_poster
+    - field.field.commerce_product.image_printed_poster.body
+    - field.field.commerce_product.image_printed_poster.field_product_category
+  module:
+    - commerce_product
+    - text
+id: commerce_product.image_printed_poster.default
+targetEntityType: commerce_product
+bundle: image_printed_poster
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_product_category:
+    weight: 12
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  title:
+    label: hidden
+    type: string
+    weight: -5
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  variations:
+    type: commerce_add_to_cart
+    weight: 10
+    region: content
+    label: above
+    settings:
+      combine: true
+    third_party_settings: {  }
+hidden:
+  created: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true
+  stores: true
+  uid: true

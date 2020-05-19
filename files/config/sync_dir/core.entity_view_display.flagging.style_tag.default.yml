@@ -1,0 +1,24 @@
+uuid: b2bc63e4-3d7c-4df6-9a68-3ac6be57ebd7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.flagging.style_tag.field_private_tags
+    - flag.flag.style_tag
+id: flagging.style_tag.default
+targetEntityType: flagging
+bundle: style_tag
+mode: default
+content:
+  field_private_tags:
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true

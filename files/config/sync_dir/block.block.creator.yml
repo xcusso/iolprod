@@ -12,7 +12,7 @@ dependencies:
 id: creator
 theme: bartik
 region: sidebar_first
-weight: -8
+weight: -7
 provider: null
 plugin: 'system_menu_block:creator'
 settings:
@@ -28,7 +28,6 @@ visibility:
     id: user_role
     roles:
       creator: creator
-      supervisor: supervisor
       administrator: administrator
     negate: false
     context_mapping:
