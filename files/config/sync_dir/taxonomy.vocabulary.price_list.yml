@@ -1,0 +1,8 @@
+uuid: b4662079-b893-455f-8be5-6f76d894c871
+langcode: en
+status: true
+dependencies: {  }
+name: 'Price list'
+vid: price_list
+description: 'Category of list rates'
+weight: 0

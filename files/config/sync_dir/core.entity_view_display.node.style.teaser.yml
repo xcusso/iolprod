@@ -4,14 +4,15 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.style.field_abstract_realistic
-    - field.field.node.style.field_detail_level
     - field.field.node.style.field_enabled
+    - field.field.node.style.field_style_abstract_realistic
     - field.field.node.style.field_style_artist
-    - field.field.node.style.field_style_artwork_types
+    - field.field.node.style.field_style_artwork_type
     - field.field.node.style.field_style_category
+    - field.field.node.style.field_style_complexity
     - field.field.node.style.field_style_description
     - field.field.node.style.field_style_image
+    - field.field.node.style.field_style_product
     - field.field.node.style.field_style_tags
     - node.type.style
   module:
@@ -26,6 +27,11 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  flag_style_tag:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   links:
     weight: 100
     settings: {  }
@@ -35,13 +41,14 @@ hidden:
   entity_print_view_epub: true
   entity_print_view_pdf: true
   entity_print_view_word_docx: true
-  field_abstract_realistic: true
-  field_detail_level: true
   field_enabled: true
+  field_style_abstract_realistic: true
   field_style_artist: true
-  field_style_artwork_types: true
+  field_style_artwork_type: true
   field_style_category: true
+  field_style_complexity: true
   field_style_description: true
   field_style_image: true
+  field_style_product: true
   field_style_tags: true
   langcode: true

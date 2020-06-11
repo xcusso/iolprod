@@ -14,3 +14,4 @@ permissions:
   - 'flag style_tag'
   - 'unflag style_select'
   - 'unflag style_tag'
+  - 'view faq page'

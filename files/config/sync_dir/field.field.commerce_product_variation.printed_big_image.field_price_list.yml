@@ -1,0 +1,33 @@
+uuid: 0223ba45-6616-429b-8f1d-33d5a0bdb46b
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.printed_big_image
+    - field.storage.commerce_product_variation.field_price_list
+    - taxonomy.vocabulary.price_list
+  content:
+    - 'taxonomy_term:price_list:f99ce574-9f0a-4d71-a916-05d64815c73e'
+id: commerce_product_variation.printed_big_image.field_price_list
+field_name: field_price_list
+entity_type: commerce_product_variation
+bundle: printed_big_image
+label: 'Price list'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    target_uuid: f99ce574-9f0a-4d71-a916-05d64815c73e
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      price_list: price_list
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

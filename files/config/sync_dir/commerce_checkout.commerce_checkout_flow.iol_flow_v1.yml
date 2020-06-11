@@ -1,0 +1,41 @@
+uuid: 897e7f74-0afc-4cd7-945b-6580ea107e0b
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_payment
+id: iol_flow_v1
+label: iol_flow_v1
+plugin: multistep_default
+configuration:
+  display_checkout_progress: true
+  panes:
+    completion_message:
+      step: complete
+      weight: 10
+    completion_register:
+      step: complete
+      weight: 10
+    contact_information:
+      double_entry: false
+      step: order_information
+      weight: 10
+    login:
+      allow_guest_checkout: true
+      allow_registration: false
+      step: login
+      weight: 10
+    order_summary:
+      view: ''
+      step: _sidebar
+      weight: 10
+    review:
+      step: review
+      weight: 10
+    payment_information:
+      step: order_information
+      weight: 10
+    payment_process:
+      capture: true
+      step: payment
+      weight: 10

@@ -4,11 +4,9 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.user.creator_account
-    - field.field.user.user.field_creator_address
-    - field.field.user.user.field_dni
+    - field.field.user.user.commerce_remote_id
     - field.field.user.user.user_picture
   module:
-    - address
     - user
 _core:
   default_config_hash: V51QPCKkgNREKtSmB9Iu2wmAMEpktVpnzklWaZV8UYo
@@ -17,28 +15,15 @@ targetEntityType: user
 bundle: user
 mode: creator_account
 content:
-  field_creator_address:
-    type: address_default
-    weight: 2
-    region: content
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-  field_dni:
-    type: string
-    weight: 1
-    region: content
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
   member_for:
     weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  commerce_remote_id: true
   creator_profile_profiles: true
+  customer_profiles: true
   entity_print_view_epub: true
   entity_print_view_pdf: true
   entity_print_view_word_docx: true

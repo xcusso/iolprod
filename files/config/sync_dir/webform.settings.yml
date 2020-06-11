@@ -67,6 +67,9 @@ settings:
   confirmation_back_classes: "button\n"
   default_limit_total_message: 'No more submissions are permitted.'
   default_limit_user_message: 'No more submissions are permitted.'
+  default_share: false
+  default_share_node: false
+  default_share_theme_name: ''
   dialog: false
   dialog_options:
     narrow:
@@ -122,13 +125,13 @@ element:
   machine_name_pattern: a-z0-9_
   empty_message: '{Empty}'
   allowed_tags: admin
-  wrapper_classes: "container-inline clearfix\nform--inline clearfix\nmessages messages--error\nmessages messages--warning\nmessages messages--status\n"
-  classes: "container-inline clearfix\nform--inline clearfix\nmessages messages--error\nmessages messages--warning\nmessages messages--status\n"
-  horizontal_rule_classes: "webform-horizontal-rule--solid\nwebform-horizontal-rule--dashed\nwebform-horizontal-rule--dotted\nwebform-horizontal-rule--gradient\nwebform-horizontal-rule--thin\nwebform-horizontal-rule--medium\nwebform-horizontal-rule--thick\nwebform-horizontal-rule--flaired\nwebform-horizontal-rule--glyph\n"
+  wrapper_classes: "container-inline clearfix\r\nform--inline clearfix\r\nmessages messages--error\r\nmessages messages--warning\r\nmessages messages--status\r\n"
+  classes: "container-inline clearfix\r\nform--inline clearfix\r\nmessages messages--error\r\nmessages messages--warning\r\nmessages messages--status\r\n"
+  horizontal_rule_classes: "webform-horizontal-rule--solid\r\nwebform-horizontal-rule--dashed\r\nwebform-horizontal-rule--dotted\r\nwebform-horizontal-rule--gradient\r\nwebform-horizontal-rule--thin\r\nwebform-horizontal-rule--medium\r\nwebform-horizontal-rule--thick\r\nwebform-horizontal-rule--flaired\r\nwebform-horizontal-rule--glyph\r\n"
   default_description_display: ''
   default_more_title: More
   default_section_title_tag: h2
-  default_empty_option: true
+  default_empty_option: false
   default_empty_option_required: ''
   default_empty_option_optional: ''
   default_algolia_places_app_id: ''
@@ -136,8 +139,6 @@ element:
   excluded_elements:
     password: password
     password_confirm: password_confirm
-  default_icheck: ''
-  default_google_maps_api_key: ''
 html_editor:
   disabled: false
   element_format: ''

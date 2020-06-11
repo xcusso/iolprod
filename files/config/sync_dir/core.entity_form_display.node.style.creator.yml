@@ -4,14 +4,15 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.node.creator
-    - field.field.node.style.field_abstract_realistic
-    - field.field.node.style.field_detail_level
     - field.field.node.style.field_enabled
+    - field.field.node.style.field_style_abstract_realistic
     - field.field.node.style.field_style_artist
-    - field.field.node.style.field_style_artwork_types
+    - field.field.node.style.field_style_artwork_type
     - field.field.node.style.field_style_category
+    - field.field.node.style.field_style_complexity
     - field.field.node.style.field_style_description
     - field.field.node.style.field_style_image
+    - field.field.node.style.field_style_product
     - field.field.node.style.field_style_tags
     - image.style.thumbnail
     - node.type.style
@@ -23,16 +24,6 @@ targetEntityType: node
 bundle: style
 mode: creator
 content:
-  field_style_artwork_types:
-    weight: 5
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-      match_limit: 10
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   field_style_category:
     weight: 3
     settings:
@@ -93,10 +84,12 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  field_abstract_realistic: true
-  field_detail_level: true
   field_enabled: true
+  field_style_abstract_realistic: true
   field_style_artist: true
+  field_style_artwork_type: true
+  field_style_complexity: true
+  field_style_product: true
   path: true
   promote: true
   status: true

@@ -1,0 +1,11 @@
+uuid: 27bf4b88-6cfc-482f-b4d6-32a1f82af206
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.price_list
+id: taxonomy_term.price_list
+target_entity_type_id: taxonomy_term
+target_bundle: price_list
+default_langcode: site_default
+language_alterable: false

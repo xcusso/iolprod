@@ -1,0 +1,12 @@
+uuid: f7afc7e4-8a35-4992-8cdc-57b24f65b318
+langcode: en
+status: true
+dependencies: {  }
+id: printed_page_image
+label: 'Printed page image'
+description: ''
+variationType: printed_page_image
+multipleVariations: true
+injectVariationFields: true
+traits: {  }
+locked: false

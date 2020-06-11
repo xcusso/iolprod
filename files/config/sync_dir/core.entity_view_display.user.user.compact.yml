@@ -4,8 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.user.compact
-    - field.field.user.user.field_creator_address
-    - field.field.user.user.field_dni
+    - field.field.user.user.commerce_remote_id
     - field.field.user.user.user_picture
   module:
     - user
@@ -22,11 +21,11 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  commerce_remote_id: true
   creator_profile_profiles: true
+  customer_profiles: true
   entity_print_view_epub: true
   entity_print_view_pdf: true
   entity_print_view_word_docx: true
-  field_creator_address: true
-  field_dni: true
   langcode: true
   user_picture: true

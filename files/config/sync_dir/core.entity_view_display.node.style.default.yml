@@ -3,14 +3,15 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.style.field_abstract_realistic
-    - field.field.node.style.field_detail_level
     - field.field.node.style.field_enabled
+    - field.field.node.style.field_style_abstract_realistic
     - field.field.node.style.field_style_artist
-    - field.field.node.style.field_style_artwork_types
+    - field.field.node.style.field_style_artwork_type
     - field.field.node.style.field_style_category
+    - field.field.node.style.field_style_complexity
     - field.field.node.style.field_style_description
     - field.field.node.style.field_style_image
+    - field.field.node.style.field_style_product
     - field.field.node.style.field_style_tags
     - image.style.thumbnail
     - node.type.style
@@ -48,6 +49,68 @@ third_party_settings:
               context_mapping: {  }
             additional: {  }
             weight: 0
+          da100143-57d1-4f1b-9aa8-3a7705052761:
+            uuid: da100143-57d1-4f1b-9aa8-3a7705052761
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:style:field_style_abstract_realistic'
+              formatter:
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+                type: list_default
+            additional: {  }
+            weight: 1
+          9edfb482-6c44-4508-9ca1-6b6c23c2b5ce:
+            uuid: 9edfb482-6c44-4508-9ca1-6b6c23c2b5ce
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:style:field_style_complexity'
+              formatter:
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+                type: list_default
+            additional: {  }
+            weight: 2
+          30a9b431-f527-474b-9105-3c2a408dc2d1:
+            uuid: 30a9b431-f527-474b-9105-3c2a408dc2d1
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:style:field_style_artwork_type'
+              formatter:
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+                type: entity_reference_label
+            additional: {  }
+            weight: 3
+          455984c3-6cc4-4cb9-b966-cf455ec25923:
+            uuid: 455984c3-6cc4-4cb9-b966-cf455ec25923
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:style:field_style_product'
+              formatter:
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+                type: entity_reference_label
+            additional: {  }
+            weight: 4
         third_party_settings: {  }
       -
         layout_id: layout_twocol_section
@@ -124,42 +187,6 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 0
-          478be1cd-a4fa-4aae-b0a6-8b3af0dda08d:
-            uuid: 478be1cd-a4fa-4aae-b0a6-8b3af0dda08d
-            region: first
-            configuration:
-              id: 'field_block:node:style:field_abstract_realistic'
-              label: 'Abstract - Realistic'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: above
-                type: list_default
-                settings: {  }
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 0
-          97817fad-45c2-40ca-877d-f1a2939eeb49:
-            uuid: 97817fad-45c2-40ca-877d-f1a2939eeb49
-            region: first
-            configuration:
-              id: 'field_block:node:style:field_detail_level'
-              label: 'Detail level'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: above
-                type: list_default
-                settings: {  }
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 1
         third_party_settings: {  }
       -
         layout_id: layout_twocol_section
@@ -218,20 +245,6 @@ targetEntityType: node
 bundle: style
 mode: default
 content:
-  field_abstract_realistic:
-    weight: 8
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
-  field_detail_level:
-    weight: 10
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
   field_enabled:
     weight: 9
     label: above
@@ -242,6 +255,13 @@ content:
     third_party_settings: {  }
     type: boolean
     region: content
+  field_style_abstract_realistic:
+    weight: 11
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   field_style_artist:
     weight: 3
     label: above
@@ -250,8 +270,8 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  field_style_artwork_types:
-    weight: 6
+  field_style_artwork_type:
+    weight: 13
     label: above
     settings:
       link: true
@@ -265,6 +285,13 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_style_complexity:
+    weight: 12
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_style_description:
     weight: 2
@@ -281,6 +308,14 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+    region: content
+  field_style_product:
+    weight: 14
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   field_style_tags:
     weight: 5

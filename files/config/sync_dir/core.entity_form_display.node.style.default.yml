@@ -3,14 +3,15 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.style.field_abstract_realistic
-    - field.field.node.style.field_detail_level
     - field.field.node.style.field_enabled
+    - field.field.node.style.field_style_abstract_realistic
     - field.field.node.style.field_style_artist
-    - field.field.node.style.field_style_artwork_types
+    - field.field.node.style.field_style_artwork_type
     - field.field.node.style.field_style_category
+    - field.field.node.style.field_style_complexity
     - field.field.node.style.field_style_description
     - field.field.node.style.field_style_image
+    - field.field.node.style.field_style_product
     - field.field.node.style.field_style_tags
     - image.style.thumbnail
     - node.type.style
@@ -29,18 +30,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_abstract_realistic:
-    weight: 4
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_detail_level:
-    weight: 5
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
   field_enabled:
     weight: 1
     settings:
@@ -48,19 +37,25 @@ content:
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
+  field_style_abstract_realistic:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_style_artist:
     weight: 2
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
-  field_style_artwork_types:
-    weight: 9
+  field_style_artwork_type:
+    weight: 28
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
@@ -73,6 +68,12 @@ content:
       match_limit: 10
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_style_complexity:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_style_description:
     weight: 6
@@ -93,6 +94,16 @@ content:
       offsets: '50,50'
     third_party_settings: {  }
     type: image_focal_point
+    region: content
+  field_style_product:
+    weight: 29
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_style_tags:
     weight: 8

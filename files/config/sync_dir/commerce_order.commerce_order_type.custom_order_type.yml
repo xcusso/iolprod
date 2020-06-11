@@ -1,0 +1,21 @@
+uuid: a57aab7e-79e5-400c-af42-33ba4048bc67
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_cart
+third_party_settings:
+  commerce_cart:
+    cart_form_view: commerce_cart_form
+    cart_block_view: commerce_cart_block
+    cart_expiration: {  }
+label: 'Custom order type'
+id: custom_order_type
+workflow: order_default
+numberPattern: order_default
+refresh_mode: customer
+refresh_frequency: 300
+sendReceipt: true
+receiptBcc: ''
+traits: {  }
+locked: false

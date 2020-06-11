@@ -1,7 +1,0 @@
-uuid: 09637769-7020-446d-95e9-a7a18bc3dd9f
-langcode: en
-status: true
-dependencies: {  }
-id: poster_size
-label: 'Poster size'
-elementType: select

@@ -4,8 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.user.register
-    - field.field.user.user.field_creator_address
-    - field.field.user.user.field_dni
+    - field.field.user.user.commerce_remote_id
     - field.field.user.user.user_picture
   module:
     - user
@@ -22,10 +21,10 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  commerce_remote_id: true
   contact: true
   creator_profile_profiles: true
-  field_creator_address: true
-  field_dni: true
+  customer_profiles: true
   langcode: true
   language: true
   path: true

@@ -1,0 +1,10 @@
+uuid: bb6af527-fa65-4e5f-8c44-904601b10a7f
+langcode: en
+status: true
+dependencies: {  }
+label: 'Custom order item'
+id: custom_order_item
+purchasableEntityType: commerce_product_variation
+orderType: custom_order_type
+traits: {  }
+locked: false

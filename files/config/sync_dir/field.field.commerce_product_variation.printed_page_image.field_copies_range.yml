@@ -1,0 +1,29 @@
+uuid: 8c1382d8-1241-4e2a-b224-a93f65d383f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.printed_page_image
+    - field.storage.commerce_product_variation.field_copies_range
+  module:
+    - range
+id: commerce_product_variation.printed_page_image.field_copies_range
+field_name: field_copies_range
+entity_type: commerce_product_variation
+bundle: printed_page_image
+label: 'Copies range'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: null
+  from:
+    prefix: ''
+    suffix: ''
+  to:
+    prefix: ''
+    suffix: ''
+field_type: range_integer

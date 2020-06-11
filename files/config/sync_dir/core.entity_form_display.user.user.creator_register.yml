@@ -4,11 +4,9 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.user.creator_register
-    - field.field.user.user.field_creator_address
-    - field.field.user.user.field_dni
+    - field.field.user.user.commerce_remote_id
     - field.field.user.user.user_picture
   module:
-    - address
     - user
 _core:
   default_config_hash: K-1rBM8mTIkFp9RqOC2tMRUukOQ1xbRCfSKK8dEddnA
@@ -22,23 +20,11 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_creator_address:
-    weight: 2
-    settings: {  }
-    third_party_settings: {  }
-    type: address_default
-    region: content
-  field_dni:
-    weight: 1
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
 hidden:
+  commerce_remote_id: true
   contact: true
   creator_profile_profiles: true
+  customer_profiles: true
   langcode: true
   language: true
   path: true

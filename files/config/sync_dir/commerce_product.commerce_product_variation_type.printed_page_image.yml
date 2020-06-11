@@ -1,0 +1,10 @@
+uuid: 0682fbe7-0d32-49c2-9432-7e6920d1ce15
+langcode: en
+status: true
+dependencies: {  }
+id: printed_page_image
+label: 'Printed page image'
+orderItemType: default
+generateTitle: true
+traits: {  }
+locked: false

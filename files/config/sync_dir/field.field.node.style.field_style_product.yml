@@ -1,0 +1,25 @@
+uuid: 081d4888-05d0-4833-a698-69b6ed5b62b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_style_product
+    - node.type.style
+id: node.style.field_style_product
+field_name: field_style_product
+entity_type: node
+bundle: style
+label: 'Style product'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: product_selector
+      display_name: entity_reference_2
+      arguments: {  }
+field_type: entity_reference

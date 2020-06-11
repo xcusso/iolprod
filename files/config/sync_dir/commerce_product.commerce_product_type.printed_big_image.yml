@@ -1,0 +1,12 @@
+uuid: 8d3d601c-42b3-4ff9-bf96-7f5b340e4d7f
+langcode: en
+status: true
+dependencies: {  }
+id: printed_big_image
+label: 'Printed big image'
+description: ''
+variationType: printed_big_image
+multipleVariations: true
+injectVariationFields: true
+traits: {  }
+locked: false

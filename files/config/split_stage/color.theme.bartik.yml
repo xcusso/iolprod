@@ -1,6 +1,6 @@
 palette:
-  top: '#068e05'
-  bottom: '#3fc31d'
+  top: '#118e05'
+  bottom: '#3ac31d'
   bg: '#ffffff'
   sidebar: '#f6f6f2'
   sidebarborders: '#f9f9f9'
@@ -8,9 +8,9 @@ palette:
   titleslogan: '#fffeff'
   text: '#3b3b3b'
   link: '#0071b3'
-logo: 'public://color/bartik-77d5b70a/logo.svg'
+logo: 'public://color/bartik-fe4610cb/logo.svg'
 stylesheets:
-  - 'public://color/bartik-77d5b70a/colors.css'
+  - 'public://color/bartik-fe4610cb/colors.css'
 files:
-  - 'public://color/bartik-77d5b70a/logo.svg'
-  - 'public://color/bartik-77d5b70a/colors.css'
+  - 'public://color/bartik-fe4610cb/logo.svg'
+  - 'public://color/bartik-fe4610cb/colors.css'

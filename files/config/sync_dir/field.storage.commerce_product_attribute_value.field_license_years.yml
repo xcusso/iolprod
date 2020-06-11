@@ -1,0 +1,20 @@
+uuid: 7eaee606-757f-4e65-bb32-d66d3eaa9e8c
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product_attribute_value.field_license_years
+field_name: field_license_years
+entity_type: commerce_product_attribute_value
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

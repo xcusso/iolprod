@@ -1,0 +1,68 @@
+uuid: 6bf58b00-7033-4f24-b9f5-b8f704ca8f2d
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.printed_page_image
+    - field.field.commerce_product_variation.printed_page_image.attribute_color
+    - field.field.commerce_product_variation.printed_page_image.attribute_page_format
+    - field.field.commerce_product_variation.printed_page_image.attribute_up_to_copies
+    - field.field.commerce_product_variation.printed_page_image.field_copies_range
+    - field.field.commerce_product_variation.printed_page_image.field_price_list
+  module:
+    - commerce_price
+    - range
+id: commerce_product_variation.printed_page_image.default
+targetEntityType: commerce_product_variation
+bundle: printed_page_image
+mode: default
+content:
+  field_copies_range:
+    weight: 1
+    label: above
+    settings:
+      range_separator: '-'
+      thousand_separator: ''
+      range_combine: true
+      from_prefix_suffix: false
+      to_prefix_suffix: false
+    third_party_settings: {  }
+    type: range_integer
+    region: content
+  field_price_list:
+    weight: 2
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  list_price:
+    label: above
+    type: commerce_price_default
+    weight: -1
+    region: content
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+  price:
+    label: above
+    type: commerce_price_default
+    weight: 0
+    region: content
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+hidden:
+  attribute_color: true
+  attribute_page_format: true
+  attribute_up_to_copies: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true
+  product_id: true
+  sku: true
+  title: true

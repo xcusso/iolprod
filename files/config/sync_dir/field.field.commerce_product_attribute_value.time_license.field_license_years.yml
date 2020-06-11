@@ -1,0 +1,23 @@
+uuid: 5f7127d3-d79a-4dc8-a869-e71bad8b2ca0
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_attribute.time_license
+    - field.storage.commerce_product_attribute_value.field_license_years
+id: commerce_product_attribute_value.time_license.field_license_years
+field_name: field_license_years
+entity_type: commerce_product_attribute_value
+bundle: time_license
+label: 'License years'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

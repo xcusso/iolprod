@@ -1,0 +1,16 @@
+uuid: 05944f45-3faf-49d8-9f63-1fdf74d4eacf
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.faq_category
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.faq_category
+target_entity_type_id: taxonomy_term
+target_bundle: faq_category
+default_langcode: site_default
+language_alterable: false

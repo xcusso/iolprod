@@ -1,0 +1,7 @@
+uuid: 8c33f97f-fde4-4f37-be7c-755751fda3b9
+langcode: en
+status: true
+dependencies: {  }
+id: support_size
+label: 'Support size'
+elementType: select

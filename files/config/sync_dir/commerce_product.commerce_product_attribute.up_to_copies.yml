@@ -1,0 +1,7 @@
+uuid: 01e138dc-6fa5-4a8a-889b-93fffd322b49
+langcode: en
+status: true
+dependencies: {  }
+id: up_to_copies
+label: 'Up to copies'
+elementType: select

@@ -13,6 +13,57 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "billboardjs/billboard",
+                "version": "1.6.2",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "billboard"
+                },
+                "dist": {
+                    "url": "https://github.com/naver/billboard.js/archive/1.6.2.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "d3v4/d3",
+                "version": "4.9.1",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "d3v4"
+                },
+                "dist": {
+                    "url": "https://cdnjs.cloudflare.com/ajax/libs/d3/4.9.1/d3.js",
+                    "type": "file"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "google/charts",
+                "version": "45",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "google_charts"
+                },
+                "dist": {
+                    "url": "https://www.gstatic.com/charts/loader.js",
+                    "type": "file"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
         }
     ],
     "require": {
@@ -23,6 +74,8 @@
         "drupal/address": "^1.7",
         "drupal/backup_migrate": "^4.0",
         "drupal/better_exposed_filters": "^4.0@beta",
+        "drupal/bootstrap4": "^2.0",
+        "drupal/charts": "^3.2",
         "drupal/coming_soon": "^3.6",
         "drupal/commerce": "^2.17",
         "drupal/config_filter": "^1.5",
@@ -31,10 +84,10 @@
         "drupal/core": "^8.7.8",
         "drupal/entity_print": "^2.1",
         "drupal/entity_print_views": "^2.1",
+        "drupal/faq": "^1.0@alpha",
         "drupal/flag": "^4.0@beta",
         "drupal/focal_point": "^1.4",
         "drupal/honeypot": "^1.29",
-        "drupal/masquerade": "^2.0@beta",
         "drupal/module_filter": "^3.1",
         "drupal/multiple_registration": "^2.89",
         "drupal/pathauto": "^1.5",

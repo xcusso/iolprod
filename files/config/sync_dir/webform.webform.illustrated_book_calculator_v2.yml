@@ -1,0 +1,185 @@
+langcode: en
+status: open
+dependencies: {  }
+open: null
+close: null
+weight: 0
+uid: 1
+template: false
+archive: false
+id: illustrated_book_calculator_v2
+title: 'Illustrated book price calculator v2'
+description: 'Webform to evaluate the prices for illustrated book'
+category: Calculator
+elements: "page1:\n  '#type': webform_wizard_page\n  '#title': Page1\n  page1_flexbox:\n    '#type': webform_flexbox\n    product_and_attributes:\n      '#type': fieldset\n      '#title': 'Product and attributes'\n      product:\n        '#type': webform_entity_select\n        '#title': Product\n        '#target_type': commerce_product\n        '#selection_handler': 'default:commerce_product'\n        '#selection_settings':\n          target_bundles:\n            printed_page_image: printed_page_image\n      color:\n        '#type': webform_entity_select\n        '#title': Color\n        '#default_value': '27'\n        '#target_type': commerce_product_attribute_value\n        '#selection_handler': 'default:commerce_product_attribute_value'\n        '#selection_settings':\n          target_bundles:\n            color: color\n      agreement:\n        '#type': fieldset\n        '#title': Agreement\n        royalties:\n          '#type': number\n          '#title': 'Illustrator Royalties %'\n          '#description': 'Percentil of royalties PT-&gt; Pactats en el contracte'\n          '#field_suffix': '%'\n        advance_amount:\n          '#type': number\n          '#title': Advance\n          '#field_suffix': €\n          '#min': 0\n    book_details:\n      '#type': fieldset\n      '#title': 'Book details'\n      book_name:\n        '#type': textfield\n        '#title': 'Book name'\n      total_pages:\n        '#type': number\n        '#title': 'Total pages'\n        '#field_suffix': pages\n        '#placeholder': 'Total book pages'\n        '#min': 1\n        '#step': 1\n      book_copies:\n        '#type': number\n        '#title': 'Number of copies'\n        '#required': true\n        '#min': 0\n        '#step': 1\n      book_sell_price:\n        '#type': number\n        '#title': 'Sell price'\n        '#description': 'Without tax (IVA or equivalent)'\n        '#field_suffix': €\n        '#min': 0\n      book_size:\n        '#type': fieldset\n        '#title': 'Book size'\n        book_size_height:\n          '#type': number\n          '#title': 'Book size height'\n          '#field_suffix': cm\n          '#placeholder': 'Book Height in cm'\n          '#min': 0\n          '#step': 0.1\n        book_size_width:\n          '#type': number\n          '#title': 'Book size width'\n          '#field_suffix': cm\n          '#placeholder': 'Book width in cm'\n          '#min': 0\n          '#step': 0.1\npage2:\n  '#type': webform_wizard_page\n  '#title': Page2\n  page2_flexbox:\n    '#type': webform_flexbox\n    illustrations:\n      '#type': fieldset\n      '#title': Illustrations\n      illustrated_cover:\n        '#type': checkbox\n        '#title': 'Illustrated cover'\n        '#description': 'The book include an illustrated cover? Check if yes.'\n      illustrated_back_cover:\n        '#type': checkbox\n        '#title': 'Illustrated back cover'\n        '#description': 'The book include an illustrated backcover'\n      number_full_page:\n        '#type': number\n        '#title': 'Number of illustrated full pages'\n        '#description': 'Please insert the number of full pages (not double pages)'\n        '#field_suffix': pages\n        '#min': 0\n        '#step': 1\n      number_double_page:\n        '#type': number\n        '#title': 'Number of illustrated double pages'\n        '#field_suffix': pages\n        '#min': 0\n        '#step': 1\n      number_half_page:\n        '#type': number\n        '#title': 'Number of illustrated half of page'\n        '#description': 'How many pages have an illustration at least 1/2 of the page&#39;s size.'\n        '#field_suffix': pages\n      number_quarter_page:\n        '#type': number\n        '#title': 'Number of illustrated quarter of page'\n        '#description': 'How many pages have an illustration at least 1/4 of the page&#39;s size.'\n        '#field_suffix': pages\n      number_detail_page:\n        '#type': number\n        '#title': 'Number of illustrated details'\n        '#description': 'How many single details are outside the illustrated pages. A illustrated detail is up to 1/8 of the page&#39;s size.'\n        '#field_suffix': pages\n        '#min': 0\n        '#step': 1\n  attributes:\n    '#type': fieldset\n    '#title': Attributes\n    '#access_create_roles':\n      - administrator\n    '#access_update_roles':\n      - administrator\n    '#access_view_roles':\n      - administrator\n    1:\n      '#type': webform_entity_select\n      '#title': '1'\n      '#default_value': '15'\n      '#target_type': commerce_product_attribute_value\n      '#selection_handler': 'default:commerce_product_attribute_value'\n      '#selection_settings':\n        target_bundles:\n          page_format: page_format\n    2:\n      '#type': webform_entity_select\n      '#title': '2'\n      '#default_value': '13'\n      '#target_type': commerce_product_attribute_value\n      '#selection_handler': 'default:commerce_product_attribute_value'\n      '#selection_settings':\n        target_bundles:\n          page_format: page_format\n    3:\n      '#type': webform_entity_select\n      '#title': '3'\n      '#default_value': '14'\n      '#target_type': commerce_product_attribute_value\n      '#selection_handler': 'default:commerce_product_attribute_value'\n      '#selection_settings':\n        target_bundles:\n          page_format: page_format\n    4:\n      '#type': webform_entity_select\n      '#title': '4'\n      '#default_value': '14'\n      '#target_type': commerce_product_attribute_value\n      '#selection_handler': 'default:commerce_product_attribute_value'\n      '#selection_settings':\n        target_bundles:\n          page_format: page_format\n    5:\n      '#type': webform_entity_select\n      '#title': '5'\n      '#default_value': '11'\n      '#target_type': commerce_product_attribute_value\n      '#selection_handler': 'default:commerce_product_attribute_value'\n      '#selection_settings':\n        target_bundles:\n          page_format: page_format\n    6:\n      '#type': webform_entity_select\n      '#title': '6'\n      '#default_value': '10'\n      '#target_type': commerce_product_attribute_value\n      '#selection_handler': 'default:commerce_product_attribute_value'\n      '#selection_settings':\n        target_bundles:\n          page_format: page_format\n    7:\n      '#type': webform_entity_select\n      '#title': '7'\n      '#default_value': '9'\n      '#target_type': commerce_product_attribute_value\n      '#selection_handler': 'default:commerce_product_attribute_value'\n      '#selection_settings':\n        target_bundles:\n          page_format: page_format\npage3:\n  '#type': webform_wizard_page\n  '#title': page3\n  '#access_create_roles':\n    - authenticated\n  '#access_update_roles':\n    - authenticated\n  '#access_view_roles':\n    - authenticated\n  page3_flexbox:\n    '#type': webform_flexbox\n    prices:\n      '#type': fieldset\n      '#title': Prices\n      cover_price:\n        '#type': webform_entity_select\n        '#title': 'Cover price'\n        '#states_clear': false\n        '#format': value\n        '#target_type': commerce_product_variation\n        '#selection_handler': views\n        '#selection_settings':\n          view:\n            view_name: product_variation\n            display_name: entity_reference_3\n            arguments:\n              - '[webform_submission:values:1:id]'\n              - '[webform_submission:values:color:id]'\n              - '[webform_submission:values:book_copies]'\n      cover_price_token:\n        '#type': webform_computed_token\n        '#title': 'Cover price token'\n        '#template': '[webform_submission:values:cover_price:entity:price:number]'\n        '#ajax': true\n      full_page_price:\n        '#type': webform_entity_select\n        '#title': 'Full page price'\n        '#default_value': '104'\n        '#format': value\n        '#target_type': commerce_product_variation\n        '#selection_handler': views\n        '#selection_settings':\n          view:\n            view_name: product_variation\n            display_name: entity_reference_3\n            arguments:\n              - '[webform_submission:values:2:id]'\n              - '[webform_submission:values:color:id]'\n              - '[webform_submission:values:book_copies]'\n      full_page_price_token:\n        '#type': webform_computed_token\n        '#title': 'Full page price token'\n        '#template': '[webform_submission:values:full_page_price:entity:price:number]'\n        '#ajax': true\n      double_page_price:\n        '#type': webform_entity_select\n        '#title': 'Double page price'\n        '#default_value': '105'\n        '#format': value\n        '#target_type': commerce_product_variation\n        '#selection_handler': views\n        '#selection_settings':\n          view:\n            view_name: product_variation\n            display_name: entity_reference_3\n            arguments:\n              - '[webform_submission:values:4:id]'\n              - '[webform_submission:values:color:id]'\n              - '[webform_submission:values:book_copies]'\n      double_page_price_token:\n        '#type': webform_computed_token\n        '#title': 'Double page price token'\n        '#template': '[webform_submission:values:double_page_price:entity:price:number]'\n        '#ajax': true\n      half_page_price:\n        '#type': webform_entity_select\n        '#title': 'Half page price'\n        '#default_value': '106'\n        '#format': value\n        '#target_type': commerce_product_variation\n        '#selection_handler': views\n        '#selection_settings':\n          view:\n            view_name: product_variation\n            display_name: entity_reference_3\n            arguments:\n              - '[webform_submission:values:5:id]'\n              - '[webform_submission:values:color:id]'\n              - '[webform_submission:values:book_copies]'\n      half_page_price_token:\n        '#type': webform_computed_token\n        '#title': 'Half page price token'\n        '#template': '[webform_submission:values:half_page_price:entity:price:number]'\n        '#ajax': true\n      quarter_page_price:\n        '#type': webform_entity_select\n        '#title': 'Quarter page price'\n        '#default_value': '107'\n        '#format': value\n        '#target_type': commerce_product_variation\n        '#selection_handler': views\n        '#selection_settings':\n          view:\n            view_name: product_variation\n            display_name: entity_reference_3\n            arguments:\n              - '[webform_submission:values:6:id]'\n              - '[webform_submission:values:color:id]'\n              - '[webform_submission:values:book_copies]'\n      quarter_page_price_token:\n        '#type': webform_computed_token\n        '#title': 'Quarter page price token'\n        '#template': '[webform_submission:values:quarter_page_price:entity:price:number]'\n        '#ajax': true\n      detail_page_price:\n        '#type': webform_entity_select\n        '#title': 'Detail page price'\n        '#default_value': '108'\n        '#format': value\n        '#target_type': commerce_product_variation\n        '#selection_handler': views\n        '#selection_settings':\n          view:\n            view_name: product_variation\n            display_name: entity_reference_3\n            arguments:\n              - '[webform_submission:values:7:id]'\n              - '[webform_submission:values:color:id]'\n              - '[webform_submission:values:book_copies]'\n      detail_page_price_token:\n        '#type': webform_computed_token\n        '#title': 'Detail page price token'\n        '#template': '[webform_submission:values:detail_page_price:entity:price:number]'\n        '#ajax': true\npage4:\n  '#type': webform_wizard_page\n  '#title': Page4\n  page4_flexbox:\n    '#type': webform_flexbox\n    total_price:\n      '#type': webform_computed_twig\n      '#title': 'Total price'\n      '#template': |\n        {# Multipliquem el boolea 0-1 per el preu de la coberta #}\n        {# Multipliquem el boolea 0-1 per el preu de la contracoberta #} \n        {{ \n        ((data.illustrated_cover) * (data.cover_price_token)) + \n        ((data.illustrated_back_cover) * (data.full_page_price_token)) +\n        (( data.number_full_page ) * (data.full_page_price_token)) +\n        (( data.number_double_page) * (data.double_page_price_token)) +\n        (( data.number_half_page) * (data.half_page_price_token)) +\n        (( data.number_quarter_page) * (data.quarter_page_price_token)) +\n        (( data.number_detail_page) * (data.detail_page_price_token))\n        }}\n        \n    advance_estimated:\n      '#type': webform_computed_twig\n      '#title': Advance\n      '#template': |\n        {{ \n        ((((data.book_copies) * (data.book_sell_price)) / 2 ) * (data.royalties)) /100 | round ( 2,'ceil' ) }}"
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  page_admin_theme: false
+  form_title: both
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_remote_addr: true
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
+  submission_label: ''
+  submission_log: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: page
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  results_customize: false
+  token_view: false
+  token_update: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers: {  }
+variants: {  }
+uuid: 8f9f6a97-5b83-4538-af35-d9a81a292c7b

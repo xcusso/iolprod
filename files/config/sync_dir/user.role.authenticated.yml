@@ -9,12 +9,14 @@ label: 'Authenticated user'
 weight: -9
 is_admin: false
 permissions:
+  - 'access checkout'
   - 'access comments'
   - 'access content'
   - 'access shortcuts'
   - 'access site-wide contact form'
   - 'flag style_select'
   - 'flag style_tag'
+  - 'manage own commerce_payment_method'
   - 'masquerade as administrator'
   - 'masquerade as authenticated'
   - 'masquerade as creator'
@@ -27,5 +29,6 @@ permissions:
   - 'unflag style_tag'
   - 'use text format basic_html'
   - 'view commerce_product'
+  - 'view faq page'
   - 'view media'
   - 'view own commerce_order'

@@ -19,5 +19,6 @@ permissions:
   - 'translate artist node'
   - 'translate artwork_type taxonomy_term'
   - 'translate style node'
+  - 'view faq page'
   - 'view own unpublished content'
   - 'view own webform submission'

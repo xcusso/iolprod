@@ -1,0 +1,10 @@
+uuid: b3b0b648-d8c1-4e05-ae0d-dd45d88afed3
+langcode: en
+status: true
+dependencies: {  }
+id: printed_big_image
+label: 'Printed big image'
+orderItemType: default
+generateTitle: true
+traits: {  }
+locked: false

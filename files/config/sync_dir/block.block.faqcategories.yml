@@ -1,0 +1,20 @@
+uuid: bdec2274-46ff-4592-b118-f3c539cefb38
+langcode: en
+status: true
+dependencies:
+  module:
+    - faq
+  theme:
+    - bartik
+id: faqcategories
+theme: bartik
+region: sidebar_first
+weight: 0
+provider: null
+plugin: faq_categories
+settings:
+  id: faq_categories
+  label: 'FAQ Categories'
+  provider: faq
+  label_display: visible
+visibility: {  }

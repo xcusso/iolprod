@@ -1,0 +1,16 @@
+uuid: 1df93545-6468-4b5a-83da-01c3d3b1ee9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_attribute.time_license
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: commerce_product_attribute_value.time_license
+target_entity_type_id: commerce_product_attribute_value
+target_bundle: time_license
+default_langcode: site_default
+language_alterable: false
